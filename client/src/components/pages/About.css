@@ -1,0 +1,32 @@
+.about {
+    margin: 20px 0;
+  }
+  
+  .title {
+    border-bottom: 1px dashed rgb(9, 93, 119);
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-width: 1280px;
+    text-align: center;
+  }
+  
+  .about-info li {
+    font-size: 18px;
+    line-height: 1.7;
+    list-style-type: circle;
+    color: rgb(70, 70, 70);
+    margin: 0 auto;
+    max-width: 1024px;
+    list-style-type: none;
+    font-family: "Open Sans Hebrew", sans-serif;
+    display: flex;
+  }
+  
+  .fa-solid {
+  
+      font-size: 13px;
+      margin-top: 8px;
+      margin-right:5px
+  
+  }
+  

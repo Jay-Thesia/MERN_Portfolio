@@ -1,0 +1,45 @@
+.education {
+  margin: 20px 0;
+}
+
+.title {
+  border-bottom: 1px dashed rgb(9, 93, 119);
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: 1280px;
+  text-align: center;
+}
+
+.education-center {
+  color: rgb(70, 70, 70);
+  font-family:'Open Sans Hebrew', sans-serif;
+
+}
+
+.single-education {
+  margin-bottom: 20px;
+  font-size: 18px;
+  background-color: #bfbdbd;
+  padding: 10px;
+  line-height: 30px;
+  letter-spacing: 0.1rem;
+  clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
+}
+
+@media screen and (min-width: 769px) {
+  .education-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+
+  .single-education {
+    margin-right: 0;
+    padding: 10px;
+    clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}

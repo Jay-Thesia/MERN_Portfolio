@@ -1,0 +1,166 @@
+steps:
+
+A.  Make initial setup
+
+1. express: To make the exress api
+
+2. Cors: To allow making request to a server of different domains
+
+3. dotenv: to use environment variable make, help in environment variable
+
+4. mongoose: Mongoose module built on the top of MongoDB driver and provides easily abstraction of the query and define a query.
+
+->There are many other goodies like middleware, plugins, population, validation. 
+
+5. cloudinary: use to store your image on the server
+
+6. nodemon : what every we write in code it will auto save and run it automatically without human interraction
+
+7. concurrently: run the multiple npm script simultaneously
+
+8. express-fileupload: Simple Express middleware for uploading files. 
+
+->It parses multipart/form-data requests, extracts the files if available, and make them available under req. files property.
+
+9. jsonwebtoken(JWT): is an open standard used to share security information between two parties — a client and a server. 
+
+->Each JWT contains encoded JSON objects, including a set of claims. 
+
+->JWTs are signed using a cryptographic algorithm to ensure that the claims cannot be altered after the token is issued
+
+10. nodemailer: use to sending email to our gmail.
+
+
+B. Create routes and test the apis
+
+11. postman: it is an application user for api testing.
+-> Right now we don't have client to test our website so we use Postman to work as client and make requests
+
+routes -> aboutRoutes.js
+
+-> It is an HTTP client that tests HTTP requests, utilizing a graphical user interface, through which we obtain different types of responses that need to be subsequently validated.
+
+
+C. make controller because we have to make logic file seprate due to security 
+
+controllers -> aboutctrl.js
+
+D.connection with mongodb atlas and add MONGO_URI in .env
+
+E. make the modelSchema: model available, easy to handle
+->Schema: It will give the structure for the add which we would like to share with mongodb atlas,if won't do this then we cannot do communication with mongoose
+-> add it to the aboutRoute.js,now ready to send,deleting and post the data to mongodb
+
+What is mongoose?
+It is the ODM(object data modeling) which provides us the easy interaction with mongoDB by using it's schema which we gave it.
+
+F.get post about data:
+
+in post request which you write in post man and the schema of mongoose both has same value (aboutValue in our case), it not than mongoose will not allow to store that data.
+
+G.getByid put and delete data:
+Make the changes in it "findbyIdandUpdate","findByIdAndDelete" and do the updation of aboutValue of aboutctrl from the aboutmodel
+
+H. Dealing with education:
+Make the eductrl,eduModel,eduRoute do same process like about  get,post,getByid,update and delete.
+
+I: dealing with experience route:
+Make the expctrl,expModel,expRoute do same process as above.
+
+J: Dealing with user Schema and routes: Make the register,login,verify routes;
+12. bcrypt: to encrypt the password use this library.
+-> Make the user model with 3 field.
+-> Make user route.
+-> Make user ctrl.
+
+->making token_secret(add what ever value you like) in the .env file
+-> node_env to post on heroku.
+-> Register the user in mongoDB atlas
+
+K:dealing with login ctrl:take the email and findByOne is it exits than we bcrypt the password and match with the current entered password if it is match we make the token jwt.sign(payload,token_secret,expiresIn="1d")
+
+L. Do verification stuff: make auth.js to do authentication using token and do verification
+
+M. : Making the project backend do same as about that 5 requests
+
+N: connect with cloudinary : to upload our project photo by make the upload route
+
+O:connect with cloudinary: delete the image using upload route
+
+Q. contact form: contact me use nodemailer end make it get and post requests and it's router
+
+
+
+Front end:
+
+
+21. Done the initial setup
+1.npx create-react-app client: to make react app
+
+2.axios: to make get and post request,generally to use api
+
+3.react-router-dom:suitable to go to one component to other component like <a> tag
+
+4.**react-particles-js** (don't use this) insted use "npm i react-tsparticles"
+
+5.react-scroll
+
+6.typewriter-effect
+
+7. add the browserRouter to the index.js which is inside the src.
+-> making react components
+
+22. Make the destination: first make the all component import in app.js and make its destination inside app.js
+
+23. Reate components and routes 
+
+24. navbar component html:use className instead of class because class is reserved for the html so react use className.
+
+->nav bar add the logo and using ul>li tag we make the navbar of the project.
+
+Qus. what is box-sizing in CSS?
+Ans. By default, the width and height of an element is calculated like this:
+
+width + padding + border = actual width of an element
+height + padding + border = actual height of an element
+
+->This means: When you set the width/height of an element, the element often appears bigger than you have set (because the element's border and padding are added to the element's specified width/height).
+
+that's why use the box sizing.
+
+
+25.navbar component css: do css transform , translate
+26.navbar css: Media Query(search)
+
+27. navbar component functinality:
+useState(false),settoggle (search) 
+
+28. navbar bar1 2 3 trasition:
+css transition and traslate (search)
+
+29. header component practical html header.js
+
+React.Fragment(like div in html) (search)
+tsparticles 
+typewriter
+add cv at right side as card.
+
+30. personal info:
+
+31,32. header css
+
+33 About componets html-css
+
+34.Education components html-css
+calc with flex(search)
+clip path polygon (search)
+
+
+35.Project Components html-css
+
+36. Experience Components html-css
+
+37. contact components html and css
+
+38,39. footer componenets html and css
+

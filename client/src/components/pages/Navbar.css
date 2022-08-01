@@ -1,0 +1,148 @@
+/* nav-bar content */
+
+.nav-container {
+  background-color: black;
+  margin: 0 auto;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  margin: 0 auto;
+}
+
+/* logo and it's image */
+
+.logoBtn {
+  display: flex;
+  padding: 5px;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imageLogo {
+  width: 60px;
+  max-height: 60px;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.imageLogo:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 1px 3px white;
+}
+
+/* toggle button */
+.btn {
+  cursor: pointer;
+}
+.bar1,
+.bar2,
+.bar3 {
+  background: white;
+  width: 35px;
+  padding: 1px;
+  margin: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.animatedBar.bar1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+  background: white;
+  width: 30px;
+}
+
+.animatedBar.bar2 {
+  opacity: 0;
+}
+
+.animatedBar.bar3 {
+  transform: rotate(45deg) translate(-4px, -5px);
+  background: white;
+  width: 30px;
+}
+
+/* links inside toggle button */
+.links {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transform: translate(-100%);
+  position: fixed;
+  top: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  z-index: 10;
+  opacity: 1;
+  transition: transform 0.4s ease-in-out;
+  font-family: 'Open Sans Hebrew', sans-serif;
+}
+
+.new-links {
+  width: 100%;
+  transform: translate(0%);
+  position: relative;
+  top: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.links li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+}
+
+.links li a:hover {
+  display: block;
+  padding: 10px 25px;
+  color: #e3e7f9;
+}
+
+.adminLi {
+  display: none;
+}
+
+.admin {
+  color: rgb(238, 8, 8);
+}
+
+@media screen and (min-width: 728px) {
+  .logoBtn {
+    border: none;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .links {
+    display: flex;
+    position: relative;
+    width: auto;
+    top: auto;
+    transform: translate(0%);
+  }
+
+  .new-links {
+    width: 100%;
+    transform: translate(0%);
+    position: relative;
+    top: auto;
+  }
+
+  .links li a:hover {
+    padding: 10px;
+    color: gray;
+  }
+}
