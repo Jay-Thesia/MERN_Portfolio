@@ -7,6 +7,7 @@ import Experience from "./Experience";
 import Education from "./Education";
 import Project from "./Project";
 import Contact from "./Contact";
+import Login from "./Login";
 import Profile from "../../images/Profile.jpg";
 import Resume from "../../images/Jay_Thesia_Resume_2022.pdf"
 
@@ -254,6 +255,7 @@ const Header = () => {
       <div>
         <Contact />
       </div>
+
     </React.Fragment>
   );
 };
