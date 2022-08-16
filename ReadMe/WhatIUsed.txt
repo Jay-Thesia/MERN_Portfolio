@@ -162,5 +162,10 @@ clip path polygon (search)
 
 37. contact components html and css
 
-38,39. footer componenets html and css
+38. footer componenets html 
 
+39,40 footer css
+
+41 Login component html css
+
+42. Register component add in login page

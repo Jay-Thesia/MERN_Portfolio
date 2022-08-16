@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
+import Register from "./Register";
 
 const Login = () => {
   return (
@@ -40,6 +41,7 @@ const Login = () => {
       </div>
 
       {/* Register */}
+      {/* <Register/> */}
     </>
   );
 };

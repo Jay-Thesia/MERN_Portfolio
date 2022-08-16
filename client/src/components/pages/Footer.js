@@ -17,39 +17,37 @@ const Footer = () => {
           <div className="link">
             <h3>Links</h3>
             <li>
-              <a href="#">
+              <Link to="/">
                 <i class="fas fa-home"></i> Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#About">
+              <Link to="/">
                 <i class="fas fa-address-card"></i> About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#Education">
+              <Link to="/">
                 <i class="fas fa-university"></i> Education
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#Experience">
+              <Link to="/">
                 <i class="fas fa-suitcase"></i> Experience
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#Project">
-                {" "}
+              <Link to="/">
                 <i class="fa-solid fa-diagram-project"></i> Project
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#Contact">
-                {" "}
+              <Link to="/">
                 <i class="fas fa-address-book"></i> Contact
-              </a>
+              </Link>
             </li>
             <li className="admin">
-              <Link to="/">
+              <Link to="/login">
                 <i class="fa-solid fa-screwdriver-wrench"></i> Admin
               </Link>
             </li>
