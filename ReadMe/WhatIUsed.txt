@@ -171,3 +171,5 @@ clip path polygon (search)
 42. Register component add in login page
 
 43. working with admin Components start making admin panel
+
+44. about admin componets html
