@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 
 const AboutAdmin = () => {
   return (
+    
     <div className="same-component">
       <div className="same-form">
+        
+      <h4 className="aboutAdmin">About Component: </h4>
         <form>
-          <h4>About Component</h4>
+          
           <label htmlFor="text">About :</label>
-          <textarea name="textarea" cols="30" rows="3"></textarea>
-          <button type="submit">Update</button>
+          <textarea name="textarea" cols="30" rows="6"></textarea>
+          <button type="submit" className="updateButton">Update</button>
         </form>
       </div>
 
@@ -19,12 +22,12 @@ const AboutAdmin = () => {
             <Link to={"/"}>
               {" "}
               <i
-                style={{ color: "black", fontSize: "20px" }}
+                style={{ color: "green", fontSize: "20px" }}
                 className="fa-solid fa-edit"
               ></i>{" "}
             </Link>
             <i
-              style={{ color: "black", fontSize: "20px" }}
+              style={{ color: "red", fontSize: "20px" }}
               className="fa-solid fa-trash"
             ></i>
           </div>

@@ -1,0 +1,109 @@
+.same-component {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.aboutAdmin {
+  font-size: 1.5em;
+  letter-spacing: 0.01rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.updateButton {
+  width: 60px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.same-form {
+  padding: 10px;
+}
+
+.fa-trash:hover,
+.fa-edit:hover {
+  opacity: 0.6;
+}
+
+.same-item {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.item-delete-tab {
+  padding: 5px;
+  background-color: red;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  position: absolute;
+  width: 200px;
+  top: 120px;
+  left: 20%;
+  display: block;
+}
+
+
+
+@media screen and (min-width: 420px) and (max-width: 720px) {
+  .item-delete-tab {
+    top: 120px;
+    left: 26%;
+  }
+
+  .same-item{
+    flex:1;
+    margin-top:32px
+  }
+}
+
+@media screen and (min-width: 724px) and (max-width: 1010px) {
+  .item-delete-tab {
+    top: 149px;
+    left: 37%;
+  }
+
+  .same-component{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: flex-start;
+  }
+  .same-item{
+    flex:1;
+    margin-top:32px
+  }
+}
+
+@media screen and (min-width: 1020px) and (max-width: 1420px) {
+  .item-delete-tab {
+    top: 150px;
+    left: 40%;
+  }
+
+  .same-component{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: flex-start;
+  }
+
+  .same-item{
+    flex:1;
+    margin-top:32px
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .item-delete-tab {
+    top: 150px;
+    left: 43.5%;
+  }
+
+  .same-component{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: flex-start;
+  }
+
+  .same-item{
+    flex:1;
+    margin-top:32px
+  }
+}

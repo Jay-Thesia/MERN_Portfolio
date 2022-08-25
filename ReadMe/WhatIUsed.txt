@@ -172,4 +172,6 @@ clip path polygon (search)
 
 43. working with admin Components start making admin panel
 
-44. about admin componets html
+44. about admin components html
+
+45. about  admin components css

@@ -12,7 +12,7 @@ const Admin = () => {
       <h1 className="title">Admin forms</h1>
       <div className="admin-center">
         {/* about component */}
-        <h3 className="admin-title">About Component</h3>
+
         <AboutAdmin />
         {/* end of about componet */}
 
@@ -20,23 +20,22 @@ const Admin = () => {
         <hr />
         {/* Education component */}
         <h3 className="admin-title">Education Component</h3>
-        <EducationAdmin/>
+        <EducationAdmin />
         {/* End of education componet */}
 
         <br />
         <hr />
         {/* Project component */}
         <h3 className="admin-title">Project Component</h3>
-        <ProjectAdmin/>
+        <ProjectAdmin />
         {/* End of project component */}
 
         <br />
         <hr />
         {/* Experience component */}
         <h3 className="admin-title">Experience Component</h3>
-        <ExperienceAdmin/>
+        <ExperienceAdmin />
         {/* End of experience component */}
-
       </div>
     </div>
   );
