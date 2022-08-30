@@ -107,3 +107,21 @@
     margin-top:32px
   }
 }
+
+
+/* Education CSS */
+
+.same-admin{
+  margin-bottom:5px;
+}
+
+.eduAdmin{
+  font-size: 1.5em;
+  letter-spacing: 0.01rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.eduForm{
+  width:320px;
+}

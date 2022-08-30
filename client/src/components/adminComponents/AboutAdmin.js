@@ -12,14 +12,14 @@ const AboutAdmin = () => {
           
           <label htmlFor="text">About :</label>
           <textarea name="textarea" cols="30" rows="6"></textarea>
-          <button type="submit" className="updateButton">Update</button>
+          <button type="submit" className="updateButton">Add item</button>
         </form>
       </div>
 
       <div className="same-item">
         <div className="about-info">
           <div className="icons">
-            <Link to={"/"}>
+            <Link to={"/editAbout"}>
               {" "}
               <i
                 style={{ color: "green", fontSize: "20px" }}

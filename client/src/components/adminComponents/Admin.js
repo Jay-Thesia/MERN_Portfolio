@@ -12,19 +12,19 @@ const Admin = () => {
       <h1 className="title">Admin forms</h1>
       <div className="admin-center">
         {/* about component */}
-
         <AboutAdmin />
         {/* end of about componet */}
 
         <br />
         <hr />
+        
         {/* Education component */}
-        <h3 className="admin-title">Education Component</h3>
         <EducationAdmin />
         {/* End of education componet */}
 
         <br />
         <hr />
+
         {/* Project component */}
         <h3 className="admin-title">Project Component</h3>
         <ProjectAdmin />
@@ -32,6 +32,7 @@ const Admin = () => {
 
         <br />
         <hr />
+
         {/* Experience component */}
         <h3 className="admin-title">Experience Component</h3>
         <ExperienceAdmin />

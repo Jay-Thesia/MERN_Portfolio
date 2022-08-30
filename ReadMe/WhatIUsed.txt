@@ -175,3 +175,7 @@ clip path polygon (search)
 44. about admin components html
 
 45. about  admin components css
+
+46. Education admin componets html
+
+47. Education admin components css

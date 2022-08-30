@@ -41,7 +41,7 @@ function App() {
         <Route exact path="/edit/:id" element={<Education />} />
 
         <Route exact path="/editExperience/:id" element={<EditExperience />} />
-        <Route exact path="editEducation/:id" element={<EditEducation />} />
+        <Route exact path="/editEducation/:id" element={<EditEducation />} />
         <Route exact path="/editProject/:id" element={<EditProject />} />
       </Routes>
 
