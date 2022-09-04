@@ -41,17 +41,15 @@
   display: block;
 }
 
-
-
 @media screen and (min-width: 420px) and (max-width: 720px) {
   .item-delete-tab {
     top: 120px;
     left: 26%;
   }
 
-  .same-item{
-    flex:1;
-    margin-top:32px
+  .same-item {
+    flex: 1;
+    margin-top: 32px;
   }
 }
 
@@ -61,14 +59,14 @@
     left: 37%;
   }
 
-  .same-component{
+  .same-component {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     align-items: flex-start;
   }
-  .same-item{
-    flex:1;
-    margin-top:32px
+  .same-item {
+    flex: 1;
+    margin-top: 32px;
   }
 }
 
@@ -78,15 +76,15 @@
     left: 40%;
   }
 
-  .same-component{
+  .same-component {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     align-items: flex-start;
   }
 
-  .same-item{
-    flex:1;
-    margin-top:32px
+  .same-item {
+    flex: 1;
+    margin-top: 32px;
   }
 }
 
@@ -96,32 +94,52 @@
     left: 43.5%;
   }
 
-  .same-component{
+  .same-component {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     align-items: flex-start;
   }
 
-  .same-item{
-    flex:1;
-    margin-top:32px
+  .same-item {
+    flex: 1;
+    margin-top: 32px;
   }
 }
 
-
 /* Education CSS */
 
-.same-admin{
-  margin-bottom:5px;
+.same-admin {
+  margin-bottom: 5px;
 }
 
-.eduAdmin{
+.eduAdmin {
   font-size: 1.5em;
   letter-spacing: 0.01rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.eduForm{
-  width:320px;
+/* Project */
+#file_img{
+  position: relative;
+  margin-top: 20px;
+  margin-left: 150px;
+}
+
+.upload img{
+  width: 115px;
+  display: block;
+  height: 90px;
+}
+#file_img span{
+  position: absolute;
+  top:-10px;
+  right: -7px;
+  color: red;
+  cursor: pointer;
+  background-color: white;
+  width:20px;
+  text-align: center;
+  border-radius: 50%;
+  
 }

@@ -26,7 +26,7 @@ const Admin = () => {
         <hr />
 
         {/* Project component */}
-        <h3 className="admin-title">Project Component</h3>
+        
         <ProjectAdmin />
         {/* End of project component */}
 
