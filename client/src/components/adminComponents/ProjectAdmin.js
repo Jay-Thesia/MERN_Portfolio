@@ -40,7 +40,7 @@ const ProjectAdmin = () => {
               <span>X</span>
             </div>
           </div>
-          <br />
+          
           <button type="submit" className="updateButton">
             Add item
           </button>
@@ -83,6 +83,8 @@ const ProjectAdmin = () => {
                 </p>
               </div>
             </div>
+
+            <h3 className="item-delete-tab">item deleted</h3>
           </div>
         </div>
       </div>

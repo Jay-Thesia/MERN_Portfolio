@@ -41,6 +41,9 @@
   display: block;
 }
 
+.updateButton{
+  margin-top:10px;
+}
 @media screen and (min-width: 420px) and (max-width: 720px) {
   .item-delete-tab {
     top: 120px;
@@ -130,6 +133,7 @@
   width: 115px;
   display: block;
   height: 90px;
+  border-color: white;
 }
 #file_img span{
   position: absolute;
@@ -142,4 +146,10 @@
   text-align: center;
   border-radius: 50%;
   
+}
+
+/* Experience */
+
+.single-experience-add{
+  margin-top: 8px;
 }

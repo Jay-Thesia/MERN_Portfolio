@@ -34,7 +34,7 @@ const Admin = () => {
         <hr />
 
         {/* Experience component */}
-        <h3 className="admin-title">Experience Component</h3>
+        
         <ExperienceAdmin />
         {/* End of experience component */}
       </div>
