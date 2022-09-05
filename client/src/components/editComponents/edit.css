@@ -1,0 +1,42 @@
+.edit {
+  margin: 0 auto;
+  max-width: 1024px;
+  display: flex;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.edit .same-form .btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.update-btn {
+  background-color: green;
+  padding: 2px;
+}
+
+.update-btn:hover {
+  color: white;
+}
+.cancel-btn {
+  background-color: red;
+  padding: 6px;
+}
+
+.cancel-btn:hover {
+  color: white;
+}
+
+.eduAdmin{
+    text-align: center;
+    text-decoration: underline ;
+    letter-spacing: 0.01px;
+}
+
+.new-updated{
+    display: block;
+}

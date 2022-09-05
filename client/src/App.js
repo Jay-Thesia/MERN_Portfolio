@@ -38,14 +38,16 @@ function App() {
 
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/admin" element={<Admin />} />
-        <Route exact path="/edit/:id" element={<Education />} />
 
+        <Route exact path="/edit/:id" element={<EditAbout />} />
         <Route exact path="/editExperience/:id" element={<EditExperience />} />
         <Route exact path="/editEducation/:id" element={<EditEducation />} />
         <Route exact path="/editProject/:id" element={<EditProject />} />
       </Routes>
 
-      <footer><Footer/></footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

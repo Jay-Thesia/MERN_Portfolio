@@ -182,4 +182,6 @@ clip path polygon (search)
 
 48 49 Project admin html css
 
-50.  Experience component
+50. Experience component
+
+51. edit admin about components
