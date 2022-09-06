@@ -187,3 +187,5 @@ clip path polygon (search)
 51. edit admin about components
 
 52. edit education components
+
+53. edit project componenet
