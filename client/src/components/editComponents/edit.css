@@ -4,7 +4,10 @@
   display: flex;
   align-items: center;
 }
-
+h3{
+  text-align: center;
+  text-decoration: underline;
+}
 button {
   cursor: pointer;
 }
@@ -12,7 +15,9 @@ button {
 .edit .same-form .btns {
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
 }
+
 
 .update-btn {
   background-color: green;

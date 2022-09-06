@@ -185,3 +185,5 @@ clip path polygon (search)
 50. Experience component
 
 51. edit admin about components
+
+52. edit education components
