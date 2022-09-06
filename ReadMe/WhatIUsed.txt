@@ -189,3 +189,5 @@ clip path polygon (search)
 52. edit education components
 
 53. edit project componenet
+
+54. edit experience component
