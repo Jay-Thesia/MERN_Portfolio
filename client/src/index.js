@@ -3,15 +3,17 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter,Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import Navbar from "./components/pages/Navbar";
+import { DataProvider } from "./components/context/GlobalContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-    
-      <App />
+      <DataProvider>
+        <App />
+      </DataProvider>
     </React.StrictMode>
   </BrowserRouter>
 );

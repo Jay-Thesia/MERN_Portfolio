@@ -192,5 +192,15 @@ clip path polygon (search)
 
 54. edit experience component
 
-55. navbar scroll functinality
+55. navbar scroll functionality
 using ScrollToElement(element is id) function and add onclick event to all the button 
+
+56. setup context API (use for state management) alternative is redux
+
+Q. What is React context? (search)
+
+A. React context allows us to pass down and use (consume) data in whatever component we need in our React app without using props. 
+
+-> In other words, React context allows us to share data (state) across our components more easily.
+
+some use cases the Context API is ideal for: theming, user language, authentication, etc.
