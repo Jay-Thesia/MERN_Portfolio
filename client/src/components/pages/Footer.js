@@ -1,47 +1,58 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { scrollbar } from "react-scroll";
+import { scrollbar, scroller } from "react-scroll";
 import "./Footer.css";
 
 const Footer = () => {
+    const scrollToElement=(element)=>{
+        scroller.scrollTo(element,{
+          smooth:true,
+          duration:800,
+          delay:50,
+          offset:-80
+        })
+      }
   return (
     <React.Fragment>
+     
       <div className="main-title">
+        
+    
         <h2 className="title footer-title"></h2>
       </div>
-
       <div className="footer-center">
         <div className="link-center">
           {/* links */}
 
           <div className="link">
             <h3>Links</h3>
-            <li>
+            
+            <li onClick={() => scrollToElement("Home")}>
               <Link to="/">
                 <i class="fas fa-home"></i> Home
               </Link>
             </li>
-            <li>
+            <li onClick={() => scrollToElement("About")}>
               <Link to="/">
                 <i class="fas fa-address-card"></i> About
               </Link>
             </li>
-            <li>
+            <li onClick={() => scrollToElement("Education")}>
               <Link to="/">
                 <i class="fas fa-university"></i> Education
               </Link>
             </li>
-            <li>
+            <li onClick={() => scrollToElement("Experience")}>
               <Link to="/">
                 <i class="fas fa-suitcase"></i> Experience
               </Link>
             </li>
-            <li>
+            <li onClick={() => scrollToElement("Project")}>
               <Link to="/">
                 <i class="fa-solid fa-diagram-project"></i> Project
               </Link>
             </li>
-            <li>
+            <li onClick={() => scrollToElement("Contact")}>
               <Link to="/">
                 <i class="fas fa-address-book"></i> Contact
               </Link>

@@ -22,13 +22,17 @@ import EditExperience from "./components/editComponents/EditExperience";
 import EditProject from "./components/editComponents/EditProject";
 
 import { Route, Routes } from "react-router-dom";
+import {Element} from 'react-scroll'
 function App() {
   return (
     <div className="App">
       <nav>
         <Navbar />
       </nav>
-      <Routes>
+
+      
+      {/* <Element>       */}
+        <Routes>
         <Route exact path="/" element={<Header />} />
         <Route exact path="/" element={<About />} />
         <Route exact path="/" element={<Experience />} />
@@ -44,6 +48,7 @@ function App() {
         <Route exact path="/editEducation/:id" element={<EditEducation />} />
         <Route exact path="/editProject/:id" element={<EditProject />} />
       </Routes>
+      {/* </Element> */}
 
       <footer>
         <Footer />

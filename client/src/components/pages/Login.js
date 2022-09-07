@@ -6,7 +6,7 @@ import Register from "./Register";
 const Login = () => {
   return (
     <>
-      <div className="login">
+      <div className="login" id="login">
         <div className="main-container">
           <h1 className="title">Login for admin</h1>
 

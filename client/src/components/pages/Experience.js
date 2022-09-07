@@ -4,9 +4,8 @@ import "./Experience.css";
 const Experience = () => {
   return (
     <div className="main-container" id="Experience">
-      <h1 className="title">Experience</h1>
-
       <div className="experience">
+        <h1 className="title">Experience</h1>
         <div className="experience-center">
           {/* single experience */}
           <div className="single-experience">
@@ -91,8 +90,6 @@ const Experience = () => {
               </li>
             </ul>
           </div>
-
-        
         </div>
       </div>
     </div>

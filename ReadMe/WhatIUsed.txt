@@ -191,3 +191,6 @@ clip path polygon (search)
 53. edit project componenet
 
 54. edit experience component
+
+55. navbar scroll functinality
+using ScrollToElement(element is id) function and add onclick event to all the button 
