@@ -36,7 +36,7 @@ app.get('/',(req,res)=>{
 });
 */
 
-//create routes
+//create routes 
 app.use("/contact>",require("./routes/contactRoute"))
 app.use("/",require("./routes/aboutRoute"));
 app.use("/",require("./routes/eduRoute"));
