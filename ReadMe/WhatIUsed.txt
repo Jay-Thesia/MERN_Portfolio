@@ -207,3 +207,5 @@ some use cases the Context API is ideal for: theming, user language, authenticat
 
 57. About component fetch data
 useEffect :- to get data from data base dynamically
+
+58.About admin fetching data.
