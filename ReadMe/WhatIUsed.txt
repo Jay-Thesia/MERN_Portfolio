@@ -209,3 +209,5 @@ some use cases the Context API is ideal for: theming, user language, authenticat
 useEffect :- to get data from data base dynamically
 
 58.About admin fetching data.
+
+59.About admin sumbit-onchange functionality and see it change automatically on the admin component

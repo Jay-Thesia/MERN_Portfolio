@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import e from "cors";
 
 const AboutAdmin = () => {
   const [aboutValue, setAbout] = useState("");
@@ -22,15 +23,39 @@ const AboutAdmin = () => {
     } catch (error) {
       console.log(error);
     }
+    //aboutdata in array use to reload a page
   }, []);
 
+  //onchange
+  const onchangeAbout=(e)=>{
+    setAbout(e.target.value);
+    console.log(aboutValue)
+  }
+
+ 
+  //submit about change
+  const handleSubmit=(e)=>{
+
+    //not to reload whole page use this 
+    e.preventDefault();
+
+    const postValue={
+      aboutValue
+    }
+
+    setAbout('');
+    axios.post('/about',postValue)
+    .then(res=>console.log('added'))
+    .catch(err=>console.log(err))
+    
+  }
   return (
     <div className="same-component">
       <div className="same-form">
         <h4 className="aboutAdmin">About Component: </h4>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="text">About :</label>
-          <textarea name="textarea" cols="24" rows="6"></textarea>
+          <textarea name="textarea" cols="24" rows="6" onChange={onchangeAbout} value={aboutValue}></textarea>
           <button type="submit" className="updateButton">
             Add item
           </button>
@@ -60,7 +85,7 @@ const AboutAdmin = () => {
         ))}
       </div>
 
-      <h3 className="item-delete-tab">item deleted</h3>
+      <h3 className={setMessageCondition ? "new-delete item-delete-tab":"item-delete-tab"}>{message}</h3>
     </div>
   );
 };

@@ -18,7 +18,7 @@ const About = () => {
           <div className="about-info" key={item._id}>
             <ul>
               <li>
-                <i class="fa-solid fa-circle"></i> {item.aboutValue}
+                <i className="fa-solid fa-circle"></i> {item.aboutValue}
               </li>
             </ul>
           </div>
