@@ -20,18 +20,18 @@ const Project = () => {
               <div className="single-project-info">
                 <h3>Personal Portfolio</h3>
                 <li>
-                  <i class="fas fa-arrow-right"></i>&#160; Dynamic personal
+                  <i className="fas fa-arrow-right"></i>&#160; Dynamic personal
                   website with admin panel which contains educations,
                   experiences, skills, projects, contact fields.
                 </li>
 
                 <li>
-                  <i class="fas fa-arrow-right"></i>&#160; MERN STACK: Mongo DB,
+                  <i className="fas fa-arrow-right"></i>&#160; MERN STACK: Mongo DB,
                   ExpressJS, ReactJS, NodeJS.
                 </li>
 
                 <li>
-                  <i class="fas fa-arrow-right"></i>&#160;{" "}
+                  <i className="fas fa-arrow-right"></i>&#160;{" "}
                   <a
                     href="https://www.jaythesia.me"
                     className="weblink"
@@ -52,25 +52,25 @@ const Project = () => {
               <div className="single-project-info">
                 <h3>Nazakat: The Finest Food</h3>
                 <li>
-                  <i class="fas fa-arrow-right"></i>&#160; About Our creative,
+                  <i className="fas fa-arrow-right"></i>&#160; About Our creative,
                   elevated food🍝 and beverage🍷 program combines satisfying
                   staples with imaginative twists.
                 </li>
 
                 <li>
                   {" "}
-                  <i class="fas fa-arrow-right"></i>&#160; From boozy brunches🕛
+                  <i className="fas fa-arrow-right"></i>&#160; From boozy brunches🕛
                   and happy hours to family👨‍👨‍👧‍👦 dinners🍽, special occasions and
                   everything in between, NAZAKAT has something for everyone.
                 </li>
 
                 <li>
-                  <i class="fas fa-arrow-right"></i>&#160; TECH STACK: Html5,
+                  <i className="fas fa-arrow-right"></i>&#160; TECH STACK: Html5,
                   Css,Less,Js,Scss,Bootstrap4
                 </li>
 
                 <li>
-                  <i class="fas fa-arrow-right"></i>&#160;{" "}
+                  <i className="fas fa-arrow-right"></i>&#160;{" "}
                   <a
                     href="https://jay-thesia.github.io/Nazakat_The_Finest_Food/"
                     className="weblink"
@@ -91,21 +91,21 @@ const Project = () => {
               <div className="single-project-info">
                 <h3>StudProf University Management</h3>
                 <li>
-                  <i class="fas fa-arrow-right"></i>&#160; UNIVERSITY MANAGEMENT SYSTEM deals with the maintenance of University data, records, instructions, and students information within the University.
+                  <i className="fas fa-arrow-right"></i>&#160; UNIVERSITY MANAGEMENT SYSTEM deals with the maintenance of University data, records, instructions, and students information within the University.
                 </li>
 
                 <li>
                   {" "}
-                  <i class="fas fa-arrow-right"></i>&#160; UMS is an automation system, which is used to store the informations, students record, and information of courses.
+                  <i className="fas fa-arrow-right"></i>&#160; UMS is an automation system, which is used to store the informations, students record, and information of courses.
                 </li>
 
                 <li>
-                  <i class="fas fa-arrow-right"></i>&#160; IDE: Eclipse JAVA EE ||
+                  <i className="fas fa-arrow-right"></i>&#160; IDE: Eclipse JAVA EE ||
                   Tech Stack: Spring framwork || Web Server(local): XAMPP || Database: mysql
                 </li>
 
                 <li>
-                  <i class="fas fa-arrow-right"></i>&#160;
+                  <i className="fas fa-arrow-right"></i>&#160;
                   <a
                     href="https://github.com/Jay-Thesia/StudProf-University-Management"
                     className="weblink"

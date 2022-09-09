@@ -29,37 +29,37 @@ const Footer = () => {
             
             <li onClick={() => scrollToElement("Home")}>
               <Link to="/">
-                <i class="fas fa-home"></i> Home
+                <i className="fas fa-home"></i> Home
               </Link>
             </li>
             <li onClick={() => scrollToElement("About")}>
               <Link to="/">
-                <i class="fas fa-address-card"></i> About
+                <i className="fas fa-address-card"></i> About
               </Link>
             </li>
             <li onClick={() => scrollToElement("Education")}>
               <Link to="/">
-                <i class="fas fa-university"></i> Education
+                <i className="fas fa-university"></i> Education
               </Link>
             </li>
             <li onClick={() => scrollToElement("Experience")}>
               <Link to="/">
-                <i class="fas fa-suitcase"></i> Experience
+                <i className="fas fa-suitcase"></i> Experience
               </Link>
             </li>
             <li onClick={() => scrollToElement("Project")}>
               <Link to="/">
-                <i class="fa-solid fa-diagram-project"></i> Project
+                <i className="fa-solid fa-diagram-project"></i> Project
               </Link>
             </li>
             <li onClick={() => scrollToElement("Contact")}>
               <Link to="/">
-                <i class="fas fa-address-book"></i> Contact
+                <i className="fas fa-address-book"></i> Contact
               </Link>
             </li>
             <li className="admin">
               <Link to="/login">
-                <i class="fa-solid fa-screwdriver-wrench"></i> Admin
+                <i className="fa-solid fa-screwdriver-wrench"></i> Admin
               </Link>
             </li>
           </div>
@@ -70,7 +70,7 @@ const Footer = () => {
             <div className="media-link">
               <li>
                 <a href="https://github.com/Jay-Thesia" target="_blank">
-                  <i class="fab fa-github"></i> GitHub
+                  <i className="fab fa-github"></i> GitHub
                 </a>
               </li>
 
@@ -79,13 +79,13 @@ const Footer = () => {
                   href="https://www.linkedin.com/in/jay-patel-76830b1ab/"
                   target="_blank"
                 >
-                  <i class="fa-brands fa-linkedin"></i> Linkedin
+                  <i className="fa-brands fa-linkedin"></i> Linkedin
                 </a>
               </li>
 
               <li>
                 <a href="https://leetcode.com/kaleen123/" target="_blank">
-                  <i class="fas fa-code"></i> Leetcode
+                  <i className="fas fa-code"></i> Leetcode
                 </a>
               </li>
 
@@ -94,25 +94,25 @@ const Footer = () => {
                   href="https://www.youtube.com/channel/UCvuJ6UsnBrpLNvbaVITyJFA"
                   target="_blank"
                 >
-                  <i class="fab fa-youtube-square"></i> Youtube
+                  <i className="fab fa-youtube-square"></i> Youtube
                 </a>
               </li>
 
               <li>
                 <a href="https://instagram.com/jay_patel_2410" target="_blank">
-                  <i class="fa-brands fa-instagram"></i> Instagram
+                  <i className="fa-brands fa-instagram"></i> Instagram
                 </a>
               </li>
 
               <li>
                 <a href="https://twitter.com/thisisjbt" target="_blank">
-                  <i class="fa-brands fa-twitter"></i> Twitter
+                  <i className="fa-brands fa-twitter"></i> Twitter
                 </a>
               </li>
 
               <li>
                 <a href="https://linktr.ee/thisisJay" target="_blank">
-                  <i class="fas fa-tree"></i> Linktree
+                  <i className="fas fa-tree"></i> Linktree
                 </a>
               </li>
             </div>
