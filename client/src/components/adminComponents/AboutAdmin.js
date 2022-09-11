@@ -9,7 +9,6 @@ const AboutAdmin = () => {
 
   const [message, setMessage] = useState("");
   const [messageCondition, setMessageCondition] = useState(false);
-  
 
   //fetching data
   const fetchData = async () => {
@@ -27,35 +26,65 @@ const AboutAdmin = () => {
   }, []);
 
   //onchange
-  const onchangeAbout=(e)=>{
+  const onchangeAbout = (e) => {
     setAbout(e.target.value);
-    console.log(aboutValue)
-  }
+    console.log(aboutValue);
+  };
 
- 
   //submit about change
-  const handleSubmit=(e)=>{
-
-    //not to reload whole page use this 
+  const handleSubmit = (e) => {
+    //not to reload whole page use this
     e.preventDefault();
 
-    const postValue={
-      aboutValue
-    }
+    const postValue = {
+      aboutValue,
+    };
 
-    setAbout('');
-    axios.post('/about',postValue)
-    .then(res=>console.log('added'))
-    .catch(err=>console.log(err))
-    
-  }
+    setAbout("");
+    axios
+      .post("/about", postValue)
+      .then((res) => console.log("added"))
+      .catch((err) => console.log(err));
+  };
+
+  //delete about
+  const deleteAbout = (id) => {
+    //delete from ui(it is delete from screen but if you reload the page it came why bez it is not deleted from DB )
+    const aboutFliterDel = aboutData.filter((item) => item._id !== id);
+
+    //delete from DB
+    const Dbdeleted = axios
+      .delete(`/about/${id}`)
+      .then((res) => {
+        setMessageCondition(true);
+        setMessage(`${res.data.msg}`);
+
+        setTimeout(() => {
+          setMessage("");
+          setMessageCondition(false);
+        }, 2000);
+      })
+      .catch((err) => console.log(err));
+
+    setAbout(Dbdeleted.data);
+
+    setAboutData(aboutFliterDel);
+  };
+
   return (
     <div className="same-component">
       <div className="same-form">
-        <h4 className="aboutAdmin">About Component: </h4>
+   
+        <h3 className="aboutAdmin">About Component</h3>
         <form onSubmit={handleSubmit}>
           <label htmlFor="text">About :</label>
-          <textarea name="textarea" cols="24" rows="6" onChange={onchangeAbout} value={aboutValue}></textarea>
+          <textarea
+            name="textarea"
+            cols="24"
+            rows="6"
+            onChange={onchangeAbout}
+            value={aboutValue}
+          ></textarea>
           <button type="submit" className="updateButton">
             Add item
           </button>
@@ -63,6 +92,15 @@ const AboutAdmin = () => {
       </div>
 
       <div className="same-item">
+      <h3
+          className={
+            setMessageCondition
+              ? "new-delete item-delete-tab"
+              : "item-delete-tab"
+          }
+        >
+          {message}
+        </h3>
         {aboutData.map((item) => (
           <div className="about-info" key={item._id}>
             <div className="icons">
@@ -75,17 +113,15 @@ const AboutAdmin = () => {
               <i
                 style={{ color: "red", fontSize: "20px" }}
                 className="fa-solid fa-trash"
+                onClick={() => deleteAbout(item._id)}
               ></i>
             </div>
 
-            <p>
-              {item.aboutValue}
-            </p>
+            <p>{item.aboutValue}</p>
           </div>
         ))}
+          
       </div>
-
-      <h3 className={setMessageCondition ? "new-delete item-delete-tab":"item-delete-tab"}>{message}</h3>
     </div>
   );
 };

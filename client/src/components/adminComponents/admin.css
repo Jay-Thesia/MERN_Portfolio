@@ -21,6 +21,7 @@
 .fa-trash:hover,
 .fa-edit:hover {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .same-item {
@@ -29,44 +30,55 @@
 }
 
 .item-delete-tab {
-  padding: 5px;
   background-color: red;
   text-align: center;
   color: white;
   font-weight: 400;
+  margin: 0 auto;
   position: absolute;
   width: 200px;
   top: 120px;
   left: 20%;
   display: block;
+  position: static;
+  align-items: center;
 }
 
-.updateButton{
-  margin-top:10px;
+.same-item .icons {
+  text-align: right;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.same-admin .single-education {
+  margin-top: 10px;
+}
+
+.single-project {
+  margin-top: 10px;
+}
+
+.updateButton {
+  margin-top: 10px;
 }
 @media screen and (min-width: 420px) and (max-width: 720px) {
   .item-delete-tab {
     top: 120px;
     left: 26%;
   }
-
-  .same-item {
-    flex: 1;
-    margin-top: 32px;
-  }
 }
 
 @media screen and (min-width: 724px) and (max-width: 1010px) {
   .item-delete-tab {
-    top: 149px;
+    top: 145px;
     left: 37%;
   }
-
   .same-component {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
   }
+
   .same-item {
     flex: 1;
     margin-top: 32px;
@@ -91,11 +103,29 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1420px) and (max-width: 1920px) {
   .item-delete-tab {
     top: 150px;
-    left: 43.5%;
+    left: 40%;
   }
+
+  .same-component {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .same-item {
+    flex: 1;
+    margin-top: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  /* .item-delete-tab {
+    top: 150px;
+    left: 43.5%;
+  } */
 
   .same-component {
     display: flex;
@@ -123,33 +153,32 @@
 }
 
 /* Project */
-#file_img{
+#file_img {
   position: relative;
   margin-top: 20px;
   margin-left: 150px;
 }
 
-.upload img{
+.upload img {
   width: 115px;
   display: block;
   height: 90px;
   border-color: white;
 }
-#file_img span{
+#file_img span {
   position: absolute;
-  top:-10px;
+  top: -10px;
   right: -7px;
   color: red;
   cursor: pointer;
   background-color: white;
-  width:20px;
+  width: 20px;
   text-align: center;
   border-radius: 50%;
-  
 }
 
 /* Experience */
 
-.single-experience-add{
+.single-experience-add {
   margin-top: 8px;
 }
