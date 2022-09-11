@@ -35,7 +35,7 @@ exports.getProjectId = async (req, res) => {
     const projectId = await projectSchema.findById(req.params.id);
     res.json(projectId);
   } catch (err) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ message: err.message });
   }
 };
 
@@ -54,7 +54,7 @@ exports.updateProjectById = async (req, res) => {
 
     await newProject.save();
 
-    res.json({ msg: "updated successfully" });
+    res.json({ msg: 'Updated Successfully'});
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -67,7 +67,7 @@ exports.deleteProjectById = async (req, res) => {
   try {
     const newProject = await projectSchema.findByIdAndDelete(req.params.id);
     
-    res.json({ msg: "deleted successfully" });
+    res.json({ msg: 'Deleted Successfully'});
   } catch (err) {
     res.status(5000).json({ msg: "server problem" });
   }

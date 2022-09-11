@@ -47,7 +47,7 @@ exports.getAboutId = async (req, res) => {
     const aboutId = await aboutSchema.findById(req.params.id);
     res.json(aboutId);
   } catch (err) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ message: err.message });
   }
 };
 
@@ -63,7 +63,7 @@ exports.updateAboutById = async (req, res) => {
 
     await newAbout.save();
 
-    res.json({msg: 'updated successfully'});
+    res.json({msg: 'Updated Successfully'});
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -76,7 +76,7 @@ exports.deleteAboutById = async (req, res) => {
  
  try{
   const newAbout=await aboutSchema.findByIdAndDelete(req.params.id);
-  res.json({msg: 'deleted successfully'});
+  res.json({msg: 'Deleted Successfully'});
  }catch(err){
   res.status(5000).json({msg:"server problem"});
  }

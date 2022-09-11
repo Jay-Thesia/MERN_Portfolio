@@ -49,7 +49,7 @@ exports.getEducationId = async (req, res) => {
     const eduId = await eduSchema.findById(req.params.id);
     res.json(eduId);
   } catch (err) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ message: err.message });
   }
 };
 
@@ -65,7 +65,7 @@ exports.updateEducationById = async (req, res) => {
 
     await newEducation.save();
 
-    res.json({msg: 'updated successfully'});
+    res.json({msg: 'Updated Successfully'});
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -78,7 +78,7 @@ exports.deleteEducationById = async (req, res) => {
  
  try{
   const newEducation=await eduSchema.findByIdAndDelete(req.params.id);
-  res.json({msg: 'deleted successfully'});
+  res.json({msg: 'Deleted Successfully'});
  }catch(err){
   res.status(5000).json({msg:"server problem"});
  }

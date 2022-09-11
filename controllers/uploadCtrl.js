@@ -63,7 +63,7 @@ exports.deleteImage=async (req, res) => {
         res.json({ msg: "image is deleted" });
       });
     } catch (err) {
-      return res.status(500).json({ msg: error.message });
+      return res.status(500).json({ msg: err.message });
     }
   }
 

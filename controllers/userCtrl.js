@@ -38,7 +38,7 @@ exports.addRegister = async (req, res) => {
     });
 
     await newUser.save();
-    res.json({ msg: "user is registered successfully" });
+    res.json({ msg: "User is registered successfully" });
   } catch (err) {
     res.status(500).json({ msg: "server problem" });
   }
@@ -68,7 +68,7 @@ exports.loginRegistered = async (req, res) => {
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      return res.status(400).json({ msg: "invalid password" });
+      return res.status(400).json({ msg: "Invalid Password" });
     }
 
     //if login is successful

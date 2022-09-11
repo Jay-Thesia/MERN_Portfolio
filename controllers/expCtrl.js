@@ -49,7 +49,7 @@ exports.getExperience = async (req, res) => {
       const expId = await expSchema.findById(req.params.id);
       res.json(expId);
     } catch (err) {
-      res.status(500).json({ message: error.message });
+      res.status(500).json({ message: err.message });
     }
   };
   
@@ -65,7 +65,7 @@ exports.getExperience = async (req, res) => {
   
       await newExperience.save();
   
-      res.json({msg: 'updated successfully'});
+      res.json({msg: 'Updated Successfully'});
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
@@ -78,7 +78,7 @@ exports.getExperience = async (req, res) => {
    
    try{
     const newExperience=await expSchema.findByIdAndDelete(req.params.id);
-    res.json({msg: 'deleted successfully'});
+    res.json({msg: 'Updated Successfully'});
    }catch(err){
     res.status(5000).json({msg:"server problem"});
    }
