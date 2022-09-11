@@ -1,27 +1,26 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link } from "react-router-dom";
 import "./admin.css";
 
 const EducationAdmin = () => {
+
+  const[eduValue,setEducation]=useState();
+
   return (
     <div className="same-component">
       <div className="same-form">
+        
+      <h3 className="item-delete-tab">The message</h3>
         <h3 className="eduAdmin">Education Component:</h3>
         <form className="eduForm">
-          <label htmlFor="text">Specialization :</label>
-          <input type="text" placeholder="Course Name" require />
-
-          <label htmlFor="date">Start Date : </label>
-          <input type="date" require />
-
-          <label htmlFor="date">End Date : </label>
-          <input type="date" require />
+          {/* <label htmlFor="text">Specialization & Date :</label>
+          <input type="text" placeholder="Course Name & date(Ex.2019-23)" require="true" />
 
           <label htmlFor="text">Organization :</label>
-          <input type="text" placeholder="College Name" require />
+          <input type="text" placeholder="College Name" require="true" />
 
           <label htmlFor="number">Grades :</label>
-          <input type="number" placeholder="GPA" require />
+          <input type="number" placeholder="GPA" require="true" /> */}
 
           <br />
           <button type="submit" className="updateButton">
@@ -51,11 +50,14 @@ const EducationAdmin = () => {
             <br />
 
             <div className="single-education">
-              <p>self-learning</p>
+              <p><b>Information & Technology(2019-2023)</b> </p>
+              <p>Lukhdhirji Engineering College,Morbi</p>
+              <p>CGPA: 9.17/10</p>
             </div>
 
-            <h3 className="item-delete-tab">The message/</h3>
+           
           </div>
+          
         </div>
       </div>
     </div>
