@@ -215,3 +215,5 @@ useEffect :- to get data from data base dynamically
 61. Edit about component fetch and Update data
 
 //backend Eduction component changes 
+
+62. Education component fetch data
