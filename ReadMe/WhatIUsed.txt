@@ -205,11 +205,13 @@ A. React context allows us to pass down and use (consume) data in whatever compo
 
 some use cases the Context API is ideal for: theming, user language, authentication, etc.
 
+
+// Backend about component changes
 57. About component fetch data
 useEffect :- to get data from data base dynamically
-
 58.About admin fetching data.
-
 59.About admin sumbit-onchange functionality and see it change automatically on the admin component
-
 60. About admin delete functionality (delete from ui and Db)
+61. Edit about component fetch and Update data
+
+//backend Eduction component changes 

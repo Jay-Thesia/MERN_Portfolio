@@ -104,7 +104,7 @@ const AboutAdmin = () => {
         {aboutData.map((item) => (
           <div className="about-info" key={item._id}>
             <div className="icons">
-              <Link to={"/editAbout"}>
+              <Link to={`/editAbout/${item._id}`}>
                 <i
                   style={{ color: "green", fontSize: "20px" }}
                   className="fa-solid fa-edit"

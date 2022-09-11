@@ -29,6 +29,12 @@
   padding: 10px;
 }
 
+.updated{
+  background-color: green;
+  color:white;
+  margin-bottom: 10px;
+}
+
 .item-delete-tab {
   background-color: red;
   text-align: center;
