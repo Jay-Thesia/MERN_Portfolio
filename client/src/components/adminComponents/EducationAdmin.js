@@ -94,7 +94,7 @@ const EducationAdmin = () => {
 
             <div className="same-admin">
               <div className="icons">
-                <Link to={"/editEducation"}>
+                <Link to={`/editEducation/${item._id}`}>
                   <i
                     style={{ color: "green", fontSize: "20px" }}
                     className="fa-solid fa-edit"
