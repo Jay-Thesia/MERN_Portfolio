@@ -1,15 +1,81 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./admin.css";
+import axios from "axios";
 
 const ExperienceAdmin = () => {
+  const [expValue, setExperience] = useState("");
+  const [expData, setExpData] = useState([]);
+  const [message, setMessage] = useState("");
+  const [msgCondition, setMsgCondition] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await axios.get("/experience");
+      setExpData(res.data);
+    };
+
+    try {
+      fetchData();
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
+
+  //on change
+  const onChangeExperience=(e)=>{
+    setExperience(e.target.value);
+    // console.log(expValue);
+    
+  }
+
+  //submit and add that thing to admin panel and main screen
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+
+    const postExperience={
+      expValue
+    }
+
+    setExperience('');
+    axios.post('/experience',postExperience)
+    .then(res=>{
+
+    })
+  }
+
+  //delete
+  const deleteExperience=(id)=>{
+    axios.delete(`/experience/${id}`)
+    .then(res=>{
+      setMsgCondition(true);
+      setMessage(`${res.data.msg}`);
+
+      setTimeout(() => {
+        setMessage('');
+        setMsgCondition(false)
+      }, 2000);
+    }).catch(err=>console.log(err))
+
+
+    //delete from ui
+    const experienceFilterDel=expData.filter(item =>(
+      item._id!=id
+    ))
+
+    setExpData(experienceFilterDel)
+  }
+
+
+
   return (
     <div className="same-component">
       <div className="same-form">
         <h3 className="eduAdmin">Experience Component</h3>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="text">Experience :</label>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <textarea name="" id="" cols="30" rows="10" value={expValue} onChange={onChangeExperience}></textarea>
           <button type="submit" className="updateButton">
             Add item
           </button>
@@ -17,36 +83,33 @@ const ExperienceAdmin = () => {
       </div>
 
       <div className="same-item">
+        <h3
+          className={setMsgCondition ? "item-delete-tab" : "item-delete-item"}
+        >
+          {message}
+        </h3>
         <div className="about-info">
-          <div className="same-admin">
-            <div className="icons">
-              <Link to={"/editExperience"}>
+          {expData.map((item) => (
+            <div className="same-admin" key={item._id}>
+              <div className="icons">
+                <Link to={`/editExperience/${item._id}`}>
+                  <i
+                    style={{ color: "green", fontSize: "20px" }}
+                    className="fa-solid fa-edit"
+                  ></i>
+                </Link>
                 <i
-                  style={{ color: "green", fontSize: "20px" }}
-                  className="fa-solid fa-edit"
+                  style={{ color: "red", fontSize: "20px" }}
+                  className="fa-solid fa-trash" onClick={()=>deleteExperience(item._id)}
                 ></i>
-              </Link>
-              <i
-                style={{ color: "red", fontSize: "20px" }}
-                className="fa-solid fa-trash"
-              ></i>
-            </div>
+              </div>
 
-            {/* single Education */}
-            <div className="single-experience-add">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatum perspiciatis praesentium porro eum libero, recusandae
-                voluptatem similique dignissimos excepturi accusamus, sequi sunt
-                modi non exercitationem suscipit accusantium dolorem cumque
-                ullam iste neque, perferendis fugiat soluta? Voluptate eum
-                temporibus, iure maiores sit, minus sunt obcaecati, sapiente
-                totam facilis recusandae? Et, fugit.
-              </p>
+              {/* single Education */}
+              <div className="single-experience-add">
+                <p>{item.expValue}</p>
+              </div>
             </div>
-
-            <h3 className="item-delete-tab">item deleted</h3>
-          </div>
+          ))}
         </div>
       </div>
     </div>
