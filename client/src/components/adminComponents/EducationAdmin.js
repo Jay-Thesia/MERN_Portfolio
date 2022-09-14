@@ -43,7 +43,7 @@ const EducationAdmin = () => {
   };
 
 
-  //delete the entry
+  //delete the entry from Db
   const deleteEducation = (id) => {
     axios
       .delete(`/education/${id}`)
