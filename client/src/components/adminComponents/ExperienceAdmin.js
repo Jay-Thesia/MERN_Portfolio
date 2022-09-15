@@ -84,7 +84,7 @@ const ExperienceAdmin = () => {
 
       <div className="same-item">
         <h3
-          className={setMsgCondition ? "item-delete-tab" : "item-delete-item"}
+          className={setMsgCondition ? "new-delete item-delete-tab" : "item-delete-item"}
         >
           {message}
         </h3>

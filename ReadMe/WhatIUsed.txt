@@ -226,5 +226,6 @@ useEffect :- to get data from data base dynamically
 
 66. Experience component fetch data
 67. Experience admin fetching data and show to admin panel and add that data to admin panel to DB and delete that data
+68. Experience admin experience fetch and update data
 
 
