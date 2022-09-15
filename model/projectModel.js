@@ -21,7 +21,7 @@ const projectSchema=mongoose.Schema({
 
     images:{
         type:Object,
-        required:true
+        
     },
 
     link:{

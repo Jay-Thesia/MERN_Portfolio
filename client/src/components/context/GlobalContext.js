@@ -7,6 +7,7 @@ export const DataContext = createContext();
 export const DataProvider = ({ children }) => {
   const [aboutValue, setAbout] = useState([]);
   const [eduValue, setEducation] = useState([]);
+  const[project,setProject]=useState([]);
   const [expValue,setExperience]=useState([]);
 
   //fetching data
@@ -27,6 +28,11 @@ export const DataProvider = ({ children }) => {
      const res3=await axios.get("/experience");
     //  console.log(res3.data);
      setExperience(res3.data);
+
+      //*******for fetch Project************
+      const res4=await axios.get("/project");
+      //  console.log(res4.data);
+       setProject(res4.data);
  
 
   };
@@ -45,6 +51,7 @@ export const DataProvider = ({ children }) => {
     about: [aboutValue, setAbout],
     education:[eduValue,setEducation],
     experience:[expValue,setExperience],
+    project:[project,setProject]
   };
 
   return <DataContext.Provider value={state}>{children}</DataContext.Provider>;

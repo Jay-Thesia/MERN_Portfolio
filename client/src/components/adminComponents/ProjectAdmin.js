@@ -1,8 +1,58 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import { Link } from "react-router-dom";
 import photu from "../../images/Profile.jpg";
+import axios from "axios"
+
+const initialState={
+  product_id:'',
+  title:'',
+  description:''
+}
+
+
 
 const ProjectAdmin = () => {
+
+  const [product,setProduct]=useState(initialState);
+  const [image,setImage]=useState(false);
+  const [message,setMessage]=useState('');
+  const [messageCond,setMessageCond]=useState(false)
+  const [projectData,setProjectData]=useState([]);
+
+  //upload image functionality
+
+  const handleUpload=async(e)=>{
+
+    e.preventDefault();
+
+    try {
+
+      const file=e.target.files[0];
+
+      if(!file) return alert('no file exist')
+
+      if(file.size()>1024 * 1024){
+        return alert('size is too big')
+      }
+
+      if(file.type!=='image/jpg' && file.type!=='image/jpeg' &&  file.type!=='image/png')
+        return alert('incorrect file format')
+
+      let formData=new FormData();
+      formData.append('file',file);
+
+      const res=await axios.post('/upload',formData,{
+        headers:{'content-type':'multipart/form-data'}
+      })
+
+      setImage(res.data)
+      
+    } catch (error) {
+      console.log(error.response.data.msg);
+    }
+  }
+
+
   return (
     <div className="same-component">
       <div className="same-form">
