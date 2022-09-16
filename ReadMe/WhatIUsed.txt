@@ -229,4 +229,5 @@ useEffect :- to get data from data base dynamically
 68. Experience admin experience fetch and update data
 
 69. Project admin Handle upload
+70. Project admin handleDestroy-handle change
 
