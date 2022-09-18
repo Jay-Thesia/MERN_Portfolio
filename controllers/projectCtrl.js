@@ -12,20 +12,24 @@ exports.getProject = async (req, res) => {
 
 //add project
 exports.addProject = async (req, res) => {
-  const { project_id, title, images, link, description } = req.body;
+  //link add
+  const { project_id,
+    title,
+    description,
+    images } = req.body;
   try {
     const newProject = await projectSchema({
       project_id,
       title,
-      images,
-      link,
       description,
+      images
+      
     });
 
     await newProject.save();
-    res.json(newProject + "produced added");
+    res.json({msg:"new project is added"});
   } catch (err) {
-    res.status(500).json({ message: err.message + "server problem" });
+    res.status(500).json({ message: err + "server problem" });
   }
 };
 
@@ -42,13 +46,12 @@ exports.getProjectId = async (req, res) => {
 //update user by id (put)
 exports.updateProjectById = async (req, res) => {
   //res.send("update user by id " + req.params.id);
-  const { project_id, title, images, link, description } = req.body;
+  const { project_id, title, images, description } = req.body;
   try {
     const newProject = await projectSchema.findByIdAndUpdate(req.params.id, {
       project_id,
       title,
       images,
-      link,
       description,
     });
 
