@@ -13,21 +13,18 @@ exports.getProject = async (req, res) => {
 //add project
 exports.addProject = async (req, res) => {
   //link add
-  const { project_id,
-    title,
-    description,
-    images } = req.body;
+  const { project_id, title, description, link, images } = req.body;
   try {
     const newProject = await projectSchema({
       project_id,
       title,
       description,
-      images
-      
+      link,
+      images,
     });
 
     await newProject.save();
-    res.json({msg:"new project is added"});
+    res.json({ msg: "new project is added" });
   } catch (err) {
     res.status(500).json({ message: err + "server problem" });
   }
@@ -46,18 +43,19 @@ exports.getProjectId = async (req, res) => {
 //update user by id (put)
 exports.updateProjectById = async (req, res) => {
   //res.send("update user by id " + req.params.id);
-  const { project_id, title, images, description } = req.body;
+  const { project_id, title, description, link, images } = req.body;
   try {
     const newProject = await projectSchema.findByIdAndUpdate(req.params.id, {
       project_id,
       title,
-      images,
       description,
+      link,
+      images,
     });
 
     await newProject.save();
 
-    res.json({ msg: 'Updated Successfully'});
+    res.json({ msg: "Updated Successfully" });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -69,8 +67,8 @@ exports.deleteProjectById = async (req, res) => {
 
   try {
     const newProject = await projectSchema.findByIdAndDelete(req.params.id);
-    
-    res.json({ msg: 'Deleted Successfully'});
+
+    res.json({ msg: "Deleted Successfully" });
   } catch (err) {
     res.status(5000).json({ msg: "server problem" });
   }

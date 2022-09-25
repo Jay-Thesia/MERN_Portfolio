@@ -19,15 +19,15 @@ const projectSchema=mongoose.Schema({
         required:true
     },
 
-    images:{
-        type:Object,
-        
-    },
 
     link:{
         type:String
-    }
+    },
 
+    images:{
+        type:Object,
+        
+    },    
 });
 
 module.exports=mongoose.model("Projects",projectSchema)
