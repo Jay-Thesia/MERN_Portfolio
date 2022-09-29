@@ -149,8 +149,8 @@ const ProjectAdmin = () => {
             onChange={handleChangeInput}
           />
 
-          {/* <label htmlFor="link">Github Link :</label>
-          <input name="link" id="link" /> */}
+          <label htmlFor="link">Github Link :</label>
+          <input name="link" id="link" onChange={handleChangeInput}/>
 
           <div className="upload">
             <input
@@ -175,7 +175,6 @@ const ProjectAdmin = () => {
       <div className="same-item">
         <div className="about-info">
           <div className="projects-admin">
-            
             <div className="icons">
               <Link to={"/editProject"}>
                 <i
