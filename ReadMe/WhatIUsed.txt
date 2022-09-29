@@ -231,4 +231,23 @@ useEffect :- to get data from data base dynamically
 69. Project admin Handle upload
 70. Project admin handleDestroy-handle change
 71. Project admin submit to mongo -cloudinary
+72. Project admin fetching-deleting data
+73.
+74.
+75.
+
+
+//contact
+
+Refrence : 
+
+Medium Blog: https://medium.com/@nickroach_50526/sending-emails-with-node-js-using-smtp-gmail-and-oauth2-316fe9c790a1
+google oauth2: google oauth playground
+google console : google cloud console apis dashboard
+76. contact form submit (search)
+77. contact form attention (less secure app enable
+Link: https://www.youtube.com/watch?v=uVDq4VOBMNM )
+
+
+
 
