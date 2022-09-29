@@ -37,15 +37,15 @@ app.get('/',(req,res)=>{
 */
 
 //create routes 
-app.use("/contact>",require("./routes/contactRoute"))
+app.use("/contact",require("./routes/contactRoute"))
+app.use("/user",require("./routes/userRoute"))
 app.use("/",require("./routes/aboutRoute"));
 app.use("/",require("./routes/eduRoute"));
 app.use("/",require("./routes/expRoute"));
-app.use("/user",require("./routes/userRoute"))
 app.use("/",require("./routes/projectRoute"))
 app.use("/",require("./routes/uploadRoute"))
 
-const PORT_value = process.env.PORT || 3000;
+const PORT_value = process.env.PORT || 5000;
 app.listen(PORT_value, () => {
   console.log("server is listening on port", PORT_value);
 });
