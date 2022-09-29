@@ -1,5 +1,5 @@
 {
-  "homepage": "https://jay-thesia.github.io/MERN_Portfolio",
+  "homepage": "http://jay-thesia.github.io/MERN_Portfolio",
   "name": "client",
   "proxy": "http://localhost:5000",
   "version": "0.1.0",
