@@ -1,9 +1,44 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React,{useContext,useState} from "react";
+import { Link,useNavigate } from "react-router-dom";
 import "./Login.css";
 import Register from "./Register";
+import axios from 'axios'
 
 const Login = () => {
+
+  const navigate=useNavigate();
+  const [user,setUser]=useState({name:'',email:'',password:''})
+
+  const [err,setErr]=useState('');
+
+  //onchange inputs
+  const onChangeInput=(e)=>{
+    const {name,value}=e.target;
+    setUser({...user,[name]:value})
+    setErr('');
+  }
+
+  //login submit
+  const loginSubmit=async (e)=>{
+    e.preventDefault();
+
+    try {
+      
+      const res=await axios.post(`/user/login`,{
+
+        email:user.email,
+        password:user.password
+      })
+
+      setUser({name:'',email:'',password:''});
+      setErr(res.data.msg);
+
+      navigate("/admin");
+    } catch (err) {
+      err.response.data.msg && setErr(err.response.data.msg)
+    }
+  }
+
   return (
     <>
       <div className="login" id="login">
@@ -11,14 +46,16 @@ const Login = () => {
           <h1 className="title">Login for admin</h1>
 
           <div className="login-center">
-            <form action="">
-              <p>You edited it</p>
+            <form onSubmit={loginSubmit}>
+              <p>{err}</p>
               <label htmlFor="email">Email :</label>
               <input
                 type="email"
                 placeholder="Enter your Email"
                 name="email"
                 required
+                value={user.email}
+                onChange={onChangeInput}
               />
 
               <label htmlFor="password">Password :</label>
@@ -27,6 +64,8 @@ const Login = () => {
                 placeholder="Enter your Password"
                 name="password"
                 required
+                value={user.password}
+                onChange={onChangeInput}
               />
 
               <div className="login-btn">
