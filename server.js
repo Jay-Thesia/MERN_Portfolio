@@ -45,7 +45,7 @@ app.use("/",require("./routes/expRoute"));
 app.use("/",require("./routes/projectRoute"))
 app.use("/",require("./routes/uploadRoute"))
 
-const PORT_value = process.env.PORT || 5000;
+const PORT_value = process.env.PORT || 5002;
 app.listen(PORT_value, () => {
   console.log("server is listening on port", PORT_value);
 });
