@@ -81,7 +81,7 @@ const Login = () => {
 
       {/* Register */}
 
-      //comment it because admin only need it
+    {/* comment it because admin only need it */}
       {/* <Register/> */}
     </>
   );
