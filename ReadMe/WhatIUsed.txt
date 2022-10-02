@@ -254,3 +254,4 @@ Link: https://www.youtube.com/watch?v=uVDq4VOBMNM )
 78. Login component functionality
 79. Register component functionality
 80. Taking token from mongo db
+81. Using token on navbar part1

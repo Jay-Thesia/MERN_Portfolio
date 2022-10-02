@@ -39,10 +39,16 @@ const Login = () => {
       setIsLogin(true);
 
       setErr(res.data.msg);
+      
+      setTimeout(() => {
+        navigate("/admin");
+      }, 1000);
+     
 
-      navigate("/admin");
+     console.log(isLogin);
+     
 
-      console.log(isLogin);
+    
     } catch (err) {
       err.response.data.msg && setErr(err.response.data.msg)
     }

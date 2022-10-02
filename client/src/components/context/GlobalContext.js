@@ -19,16 +19,16 @@ export const DataProvider = ({ children }) => {
       const verified = await axios.get(`/user/verify`, {
         headers: { Authorization: token },
       });
-      console.log(verified);
+      // console.log(verified);
 
       setIsLogin(verified.data);
 
       if (verified.data === false) {
-        console.log(verified.data+"verified data check");
-        console.log(localStorage.getItem("tokenStore"))
-        // return localStorage.clear();
+        // console.log(verified.data+"verified data check");
+        // console.log(localStorage.getItem("tokenStore"))
+        return localStorage.clear();
       } else {
-        setIsLogin(false);
+        setIsLogin(true);
       }
     }
   };
