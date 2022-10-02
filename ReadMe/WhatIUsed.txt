@@ -236,7 +236,7 @@ useEffect :- to get data from data base dynamically
 74.
 75.
 
-
+(... three dot in react with property)
 //contact
 
 Refrence : 
@@ -249,5 +249,7 @@ google console : google cloud console apis dashboard
 Link: https://www.youtube.com/watch?v=uVDq4VOBMNM )
 
 
+
 //Authentication
 78. Login component functionality
+79. Register component functionality
