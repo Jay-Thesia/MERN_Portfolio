@@ -81,14 +81,14 @@ exports.loginRegistered = async (req, res) => {
     const token = jwt.sign(payload, process.env.TOKEN_SECRET, {
       expiresIn: "1d",
     });
-    return res.json(token);
+    return res.json({token});
   } catch (error) {
     return res.status(500).json({ msg: error.message });
   }
 };
 
 //verify
-exports.verifyRegistered = async (req, res) => {
+exports.verifyRegistered =  (req, res) => {
   try {
     const token = req.header("Authorization");
 
