@@ -7,7 +7,7 @@ import axios from 'axios'
 const Login = () => {
 
   const navigate=useNavigate();
-  const [user,setUser]=useState({name:'',email:'',password:''})
+  const [user,setUser]=useState({email:'',password:''})
 
   const [err,setErr]=useState('');
 
@@ -30,7 +30,7 @@ const Login = () => {
         password:user.password
       })
 
-      setUser({name:'',email:'',password:''});
+      setUser({email:'',password:''});
       setErr(res.data.msg);
 
       navigate("/admin");
@@ -80,6 +80,8 @@ const Login = () => {
       </div>
 
       {/* Register */}
+
+      //comment it because admin only need it
       {/* <Register/> */}
     </>
   );
