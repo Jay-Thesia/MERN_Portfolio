@@ -1,15 +1,19 @@
 import React,{useContext,useState} from "react";
 import { Link,useNavigate } from "react-router-dom";
 import "./Login.css";
-import Register from "./Register";
+// import Register from "./Register";
 import axios from 'axios'
+import {DataContext} from '../context/GlobalContext'
 
 const Login = () => {
 
   const navigate=useNavigate();
   const [user,setUser]=useState({email:'',password:''})
+  const state=useContext(DataContext);
+  const [isLogin,setIsLogin]=state.isLogin;
 
   const [err,setErr]=useState('');
+  
 
   //onchange inputs
   const onChangeInput=(e)=>{
@@ -31,9 +35,14 @@ const Login = () => {
       })
 
       setUser({email:'',password:''});
+      localStorage.setItem('tokenStore',res.data.token);
+      setIsLogin(true);
+
       setErr(res.data.msg);
 
       navigate("/admin");
+
+      console.log(isLogin);
     } catch (err) {
       err.response.data.msg && setErr(err.response.data.msg)
     }
@@ -64,6 +73,7 @@ const Login = () => {
                 placeholder="Enter your Password"
                 name="password"
                 required
+                autoComplete="on"
                 value={user.password}
                 onChange={onChangeInput}
               />

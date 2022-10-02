@@ -253,3 +253,4 @@ Link: https://www.youtube.com/watch?v=uVDq4VOBMNM )
 //Authentication
 78. Login component functionality
 79. Register component functionality
+80. Taking token from mongo db
