@@ -10,7 +10,11 @@ const app = express();
 
 //middleware: which has access in the all app
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 app.use(fileUpload({
   useTempFiles:true
 }))
@@ -49,3 +53,5 @@ const PORT_value = process.env.PORT || 5000;
 app.listen(PORT_value, () => {
   console.log("server is listening on port", PORT_value);
 });
+
+// const socket = openSocket('http://localhost:5000',  {transports: ['websocket']});
