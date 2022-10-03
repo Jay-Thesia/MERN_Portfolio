@@ -21,8 +21,8 @@ const Project = () => {
                 <h3>Personal Portfolio</h3>
                 <li>
                   <i className="fas fa-arrow-right"></i>&#160; Dynamic personal
-                  website with admin panel which contains educations,
-                  experiences, skills, projects, contact fields.
+                  website with admin panel which contains education,
+                  experiences, skills, projects and contact fields.
                 </li>
 
                 <li>
@@ -91,12 +91,12 @@ const Project = () => {
               <div className="single-project-info">
                 <h3>StudProf University Management</h3>
                 <li>
-                  <i className="fas fa-arrow-right"></i>&#160; UNIVERSITY MANAGEMENT SYSTEM deals with the maintenance of University data, records, instructions, and students information within the University.
+                  <i className="fas fa-arrow-right"></i>&#160; UNIVERSITY MANAGEMENT SYSTEM deals with the maintenance of University data, records, instructions, and student information within the University.
                 </li>
 
                 <li>
                   {" "}
-                  <i className="fas fa-arrow-right"></i>&#160; UMS is an automation system, which is used to store the informations, students record, and information of courses.
+                  <i className="fas fa-arrow-right"></i>&#160; UMS is an automation system, which is used to store the information, student record, and information of courses.
                 </li>
 
                 <li>
