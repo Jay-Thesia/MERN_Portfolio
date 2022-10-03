@@ -5,6 +5,7 @@
 
 .single-experience {
   background-color: #bfbdbd;
+  margin: 0 auto;
   margin-bottom: 20px;
   width: 100%;
   font-size: 20px;
@@ -12,6 +13,7 @@
   letter-spacing: 0.01rem;
   transition: all 0.3s ease-in-out;
   border-radius: 10px;
+  max-width: 1020px;
 }
 
 .single-experience:hover {
