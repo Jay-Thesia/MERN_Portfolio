@@ -255,3 +255,4 @@ Link: https://www.youtube.com/watch?v=uVDq4VOBMNM )
 79. Register component functionality
 80. Taking token from mongo db
 81. Using token on navbar part1
+82. 80.Using token in navbar part2

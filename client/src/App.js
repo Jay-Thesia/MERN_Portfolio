@@ -23,7 +23,13 @@ import EditProject from "./components/editComponents/EditProject";
 
 import { Route, Routes } from "react-router-dom";
 import {Element} from 'react-scroll'
+import {DataContext} from './components/context/GlobalContext';
+import { useContext } from "react";
+
 function App() {
+
+  const state=useContext(DataContext);
+  const [isLogin,setIsLogin]=state.isLogin;
   return (
     <div className="App">
       <nav>
@@ -41,7 +47,12 @@ function App() {
         <Route exact path="/" element={<Contact />} />
 
         <Route exact path="/login" element={<Login />} />
-        <Route exact path="/admin" element={<Admin />} />
+
+        {/* any one can access to your admin by putting /admin in url WITHOUT LOGIN  */}
+        {/* <Route exact path="/admin" element={<Admin />} /> */}
+
+        {/* if you login than and than you can access admin */}
+        <Route exact path="/admin" element={isLogin? <Admin/>:<Login/>}/>
 
         <Route exact path="/editAbout/:id" element={<EditAbout />} />
         <Route exact path="/editExperience/:id" element={<EditExperience />} />
