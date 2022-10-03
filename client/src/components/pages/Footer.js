@@ -1,23 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { scrollbar, scroller } from "react-scroll";
 import "./Footer.css";
+import { DataContext } from "../context/GlobalContext";
 
 const Footer = () => {
-    const scrollToElement=(element)=>{
-        scroller.scrollTo(element,{
-          smooth:true,
-          duration:800,
-          delay:50,
-          offset:-80
-        })
-      }
+  const state = useContext(DataContext);
+  const [isLogin, setIsLogin] = state.isLogin;
+
+  const logOutSubmit=()=>{
+    localStorage.clear();
+    setIsLogin(false);
+  }
+  const scrollToElement = (element) => {
+    scroller.scrollTo(element, {
+      smooth: true,
+      duration: 800,
+      delay: 50,
+      offset: -80,
+    });
+  };
   return (
     <React.Fragment>
-     
       <div className="main-title">
-        
-    
         <h2 className="title footer-title"></h2>
       </div>
       <div className="footer-center">
@@ -26,7 +31,7 @@ const Footer = () => {
 
           <div className="link">
             <h3>Links</h3>
-            
+
             <li onClick={() => scrollToElement("Home")}>
               <Link to="/">
                 <i className="fas fa-home"></i> Home
@@ -49,7 +54,7 @@ const Footer = () => {
             </li>
             <li onClick={() => scrollToElement("Project")}>
               <Link to="/">
-                <i className="fa-solid fa-diagram-project"></i> Project
+                <i className="fas fa-diagram-project"></i> Project
               </Link>
             </li>
             <li onClick={() => scrollToElement("Contact")}>
@@ -57,9 +62,22 @@ const Footer = () => {
                 <i className="fas fa-address-book"></i> Contact
               </Link>
             </li>
-            <li className="admin">
+
+            <li className={isLogin ? "" : "adminLi"}>
+              <Link to={isLogin ? "/admin" : "/"}>
+                {isLogin ? (
+                  <div className="admin">
+                    <i className="fas fa-screwdriver-wrench"></i> Admin
+                  </div>
+                ) : (
+                  ""
+                )}
+              </Link>
+            </li>
+
+            <li onClick={logOutSubmit}>
               <Link to="/login">
-                <i className="fa-solid fa-screwdriver-wrench"></i> Admin
+                {isLogin?<div className=""><i className="fas fa-right-from-bracket"></i> Logout</div>: <div className=""><i className="fas fa-right-to-bracket"></i> Login</div> }
               </Link>
             </li>
           </div>

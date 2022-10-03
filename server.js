@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const fileUpload=require("express-fileupload");
+const path=require('path');
 
 dotenv.config();
 
