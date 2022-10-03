@@ -226,7 +226,7 @@ const Header = () => {
             {/* Email */}
             <div className="info">
               <label htmlFor="name">Email:</label>
-              <h4>jayengieer.jp2410@gmail.com</h4>
+              <h4>jayengineer.jp2410@gmail.com</h4>
             </div>
           </div>
 
