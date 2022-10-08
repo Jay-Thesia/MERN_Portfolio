@@ -23,12 +23,9 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          npm install
-          npm run start
-          npm ci --prefix client
-          npm run build --prefix client
+          npm ci
+          npm run heroku-postbuild
       
-     
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -49,8 +46,6 @@ jobs:
         with:
           name: node-app
 
-        
-        
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
