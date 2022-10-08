@@ -49,10 +49,10 @@ app.use("/",require("./routes/uploadRoute"))
 const PORT_value = process.env.PORT || 5002;
 
 //static assets
-
+if(process.env.NODE_ENV==='production'){
   app.use(express.static('client/build'));
   app.get('*',(req,res)=>res.sendFile(path.resolve(__dirname,'client','build','index.html')))
-
+}
 
 app.listen(PORT_value, () => {
   console.log("server is listening on port", PORT_value);
