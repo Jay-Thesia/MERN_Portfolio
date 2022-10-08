@@ -23,8 +23,8 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          npm install
-          npm run build --if-present
+          npm ci
+          npm run heroku-postbuild
       
       
       - name: Upload artifact for deployment job
