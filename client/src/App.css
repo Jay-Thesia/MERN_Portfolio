@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.main-container,
+.contact,
+.main-title {
+ 
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ......................header.............. */
+
+/* for more check header.css */
+
+/* ...........end header................... */

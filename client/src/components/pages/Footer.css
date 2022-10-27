@@ -1,0 +1,50 @@
+.main-title {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+.footer-center {
+  padding: 20px 0;
+  background-color: black;
+}
+
+.footer-center .link-center {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.link-center h3,
+.media-center h3 {
+  margin-bottom: 20px;
+  letter-spacing: 0.03rem;
+  text-decoration: underline wavy;
+}
+
+.link li,
+.media-link li {
+  margin-bottom: 5px;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: lightgrey;
+}
+
+.footer {
+  border-top: 1px solid lightgray;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+}
+
