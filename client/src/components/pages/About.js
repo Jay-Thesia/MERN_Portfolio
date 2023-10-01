@@ -10,11 +10,35 @@ const About = () => {
     <div className="main-container" id="About">
       <div className="about">
         <h1 className="title">About Us</h1>
-
         {/* about */}
+        {/* about */}
+        <div className="about-info">
+          <ul className="bullet">
+            <li>
+              <i class="fa-solid fa-circle"></i> Hello everyone, I am Jay
+              Thesia. This is my personal portfolio which has been created by
+              me.
+            </li>
+            <li>
+              <i class="fa-solid fa-circle"></i> I am Student and self taught
+              Developer.{" "}
+            </li>
+            <li>
+              <i class="fa-solid fa-circle"></i> I am currently pursuing my
+              Bachlore of Engineering from Lukhdhirji Engineering College in a
+              specialization of Information and Technology with current CGPA of
+              9/10.
+            </li>
+            <li>
+              <i class="fa-solid fa-circle"></i> I can cover all the full stack
+              requirement in web development.
+            </li>
+          </ul>
+        </div>
 
         {/* use a map function */}
-        {aboutValue.map((item) => (
+
+        {/* {aboutValue?.map((item) => (
           <div className="about-info" key={item._id}>
             <ul>
               <li>
@@ -22,7 +46,7 @@ const About = () => {
               </li>
             </ul>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );

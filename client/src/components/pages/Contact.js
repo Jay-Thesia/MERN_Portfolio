@@ -4,6 +4,8 @@ import contact from "../../images/ContactBanner.gif";
 import send from "../../images/Send_Mail.gif";
 import axios from "axios";
 
+import { useForm, ValidationError } from "@formspree/react";
+
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -64,7 +66,6 @@ const Contact = () => {
 
   //button
   const onClickSend = () => {
-
     // setShowButton(false);
 
     setTimeout(() => {
@@ -72,17 +73,33 @@ const Contact = () => {
     }, 100);
 
     <div className="">
-       {showButton ?null  : <button type="submit" onClick={onClickSend}>
-                  {/* <i className="fa fa-paper-plane"></i> */}
-                  Send
-                </button>}
-    </div>
-  //     {/* <i className="fa fa-paper-plane"></i> */}
+      {showButton ? null : (
+        <button type="submit" onClick={onClickSend}>
+          {/* <i className="fa fa-paper-plane"></i> */}
+          Send
+        </button>
+      )}
+    </div>;
+    //     {/* <i className="fa fa-paper-plane"></i> */}
 
     setTimeout(() => {
-      setShowButton(true)
+      setShowButton(true);
     }, 5000);
   };
+
+  //typeform wala
+  const [state, handleSubmit] = useForm("mqkjywkr");
+  if (state.succeeded) {
+    <img
+      src={send}
+      style={{ width: "100px", height: "100px", maxWidth: "1024px" }}
+    ></img>;
+    return (
+      <h1 style={{ margin: "0px 10px", color: "green" }}>
+        Your mail is sent.....
+      </h1>
+    );
+  }
 
   return (
     <div className="main-container" id="Contact">
@@ -91,6 +108,65 @@ const Contact = () => {
 
         <div className="contactFrom-center">
           <div className="contact_form">
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="name">Name: </label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+                value={name}
+                onChange={handleNameChange}
+                style={{ "margin-bottom": "10px" }}
+              />
+              <ValidationError
+                prefix="Name"
+                field="name"
+                errors={state.errors}
+              />
+
+              <label htmlFor="email">Email Address</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                style={{ "margin-bottom": "10px" }}
+                placeholder={"Enter your email"}
+              />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
+
+              <label htmlFor="">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder={"Enter your message "}
+                style={{
+                  "margin-bottom": "10px",
+                  "font-size": "14px",
+                  "font-family": "Arial, sans-serif",
+                  letterSpacing: 0.5,
+                }}
+              />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
+              <button
+                type="submit"
+                className="sent-btn"
+                disabled={state.submitting}
+              >
+                Submit
+              </button>
+            </form>
+
+            {/*
             <form onSubmit={formSubmit}>
               <p>{banner}</p>
               <label htmlFor="name">Name: </label>
@@ -125,7 +201,7 @@ const Contact = () => {
               <div className="sent-btn" onClick={onClickSend}>
                 {showButton && <button type="submit">Send</button>}
 
-                {/* <i className="fa fa-paper-plane"></i> */}
+                // <i className="fa fa-paper-plane"></i> 
               </div>
 
               <div style={{ textAlign: "center", margin: "10px" }}>
@@ -141,7 +217,8 @@ const Contact = () => {
                   ""
                 )}
               </div>
-            </form>
+            </form> 
+                */}
           </div>
 
           {/* contact-inf */}

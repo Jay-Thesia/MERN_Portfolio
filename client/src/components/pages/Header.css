@@ -1,14 +1,12 @@
-#tsparticles{
-  height:400px;
-  width:100%;
+#tsparticles {
+  height: 400px;
+  width: 100%;
 }
-
 
 .header {
   width: 100%;
   height: 400px;
   position: relative;
-  
 }
 
 .fullName h1 {
@@ -63,7 +61,7 @@
 .personalInfo-details h4 {
   margin: 5px;
   color: white;
-  font-family:'Open Sans Hebrew', sans-serif;
+  font-family: "Open Sans Hebrew", sans-serif;
 }
 
 .personalInfo {
@@ -168,8 +166,6 @@
 }
 
 @media screen and (max-width: 430px) {
-
-
   .personalInfo {
     margin-top: -90px;
   }
@@ -190,7 +186,7 @@
   .personalInfo-img img {
     width: 112px;
     height: 210px;
-    margin-right: 10px;
+    margin-right: 5px;
   }
 }
 
@@ -201,9 +197,16 @@
     width: 480px;
   }
 
+  .personalInfo-details .info {
+    border: px solid;
+    border-color: white;
+    margin-top: 19px;
+    padding: 5px;
+  }
+
   .personalInfo-img img {
     width: 180px;
-    height: 210px;
+    height: 250px;
     margin-left: 10px;
   }
 }

@@ -8,8 +8,8 @@ import Education from "./Education";
 import Project from "./Project";
 import Contact from "./Contact";
 import Login from "./Login";
-import Profile from "../../images/Profile.jpg";
-import Resume from "../../images/Jay_Thesia_Resume_2022.pdf"
+import Profile from "../../images/profile2.jpg";
+import Resume from "../../images/Jay_Thesia_Resume_2022.pdf";
 
 import { loadFull } from "tsparticles";
 
@@ -36,136 +36,130 @@ const Header = () => {
               id="tsparticles"
               init={particlesInit}
               loaded={particlesLoaded}
-
-            
               options={{
-                
-                  "background": {
-                    "color": {
-                      "value": "#bfbdbd"
-                    },
-                     
+                background: {
+                  color: {
+                    value: "#bfbdbd",
                   },
+                },
 
-                
-                  "fullScreen":false,
-                  "backgroundMask": {
-                    "cover": {
-                      "color": {
-                        "value": "#000"
-                      }
-                    }
+                fullScreen: false,
+                backgroundMask: {
+                  cover: {
+                    color: {
+                      value: "#000",
+                    },
                   },
-                  
-                  "interactivity": {
-                    "events": {
-                      "onClick": {
-                        "enable": true,
-                        "mode": "push"
-                      },
-                      // "onHover": {
-                      //   "enable": true,
-                      //   "mode": "grab",
-                      //   "parallax": {
-                      //     "enable": true,
-                      //     "force": 60
-                      //   }
-                      // }
+                },
+
+                interactivity: {
+                  events: {
+                    onClick: {
+                      enable: true,
+                      mode: "push",
                     },
-                    "modes": {
-                      "bubble": {
-                        "distance": 400,
-                        "duration": 2,
-                        "opacity": 0.8,
-                        "size": 40,
-                        "divs": {
-                          "distance": 200,
-                          "duration": 0.4,
-                          "mix": false,
-                          "selectors": []
-                        }
-                      },
-                      "grab": {
-                        "distance": 400
-                      },
-                      "repulse": {
-                        "divs": {
-                          "distance": 200,
-                          "duration": 0.4,
-                          "factor": 100,
-                          "speed": 1,
-                          "maxSpeed": 50,
-                          "easing": "ease-out-quad",
-                          "selectors": []
-                        }
-                      }
-                    }
+                    // "onHover": {
+                    //   "enable": true,
+                    //   "mode": "grab",
+                    //   "parallax": {
+                    //     "enable": true,
+                    //     "force": 60
+                    //   }
+                    // }
                   },
-                  "particles": {
-                    "color": {
-                      "value": "#ffffff"
+                  modes: {
+                    bubble: {
+                      distance: 400,
+                      duration: 2,
+                      opacity: 0.8,
+                      size: 40,
+                      divs: {
+                        distance: 200,
+                        duration: 0.4,
+                        mix: false,
+                        selectors: [],
+                      },
                     },
-                    "links": {
-                      "color": {
-                        "value": "#ffffff"
-                      },
-                      "distance": 150,
-                      "enable": true,
-                      "opacity": 0.4
+                    grab: {
+                      distance: 400,
                     },
-                    "move": {
-                      "attract": {
-                        "rotate": {
-                          "x": 600,
-                          "y": 1200
-                        }
+                    repulse: {
+                      divs: {
+                        distance: 200,
+                        duration: 0.4,
+                        factor: 100,
+                        speed: 1,
+                        maxSpeed: 50,
+                        easing: "ease-out-quad",
+                        selectors: [],
                       },
-                      "enable": true,
-                      "path": {},
-                      "outModes": {
-                        "bottom": "out",
-                        "left": "out",
-                        "right": "out",
-                        "top": "out"
-                      },
-                      "spin": {}
                     },
-                    "number": {
-                      "density": {
-                        "enable": true
-                      }
+                  },
+                },
+                particles: {
+                  color: {
+                    value: "#ffffff",
+                  },
+                  links: {
+                    color: {
+                      value: "#ffffff",
                     },
-                    "opacity": {
-                      "random": {
-                        "enable": true
+                    distance: 150,
+                    enable: true,
+                    opacity: 0.4,
+                  },
+                  move: {
+                    attract: {
+                      rotate: {
+                        x: 600,
+                        y: 1200,
                       },
-                      "value": {
-                        "min": 0.1,
-                        "max": 0.5
-                      },
-                      "animation": {
-                        "enable": true,
-                        "speed": 3,
-                        "minimumValue": 0.1
-                      }
                     },
-                    "size": {
-                      "random": {
-                        "enable": true
-                      },
-                      "value": {
-                        "min": 0.1,
-                        "max": 10
-                      },
-                      "animation": {
-                        "enable": true,
-                        "speed": 20,
-                        "minimumValue": 0.1
-                      }
-                    }
-                  }
-                }
-              }
+                    enable: true,
+                    path: {},
+                    outModes: {
+                      bottom: "out",
+                      left: "out",
+                      right: "out",
+                      top: "out",
+                    },
+                    spin: {},
+                  },
+                  number: {
+                    density: {
+                      enable: true,
+                    },
+                  },
+                  opacity: {
+                    random: {
+                      enable: true,
+                    },
+                    value: {
+                      min: 0.1,
+                      max: 0.5,
+                    },
+                    animation: {
+                      enable: true,
+                      speed: 3,
+                      minimumValue: 0.1,
+                    },
+                  },
+                  size: {
+                    random: {
+                      enable: true,
+                    },
+                    value: {
+                      min: 0.1,
+                      max: 10,
+                    },
+                    animation: {
+                      enable: true,
+                      speed: 20,
+                      minimumValue: 0.1,
+                    },
+                  },
+                },
+              }}
             />
           </div>
 
@@ -255,7 +249,6 @@ const Header = () => {
       <div>
         <Contact />
       </div>
-
     </React.Fragment>
   );
 };

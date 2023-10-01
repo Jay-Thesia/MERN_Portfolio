@@ -2,23 +2,25 @@ const dotenv = require("dotenv");
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const fileUpload=require("express-fileupload");
-const path=require('path');
-const compression=require("compression")
-const helmet=require('helmet')
+const fileUpload = require("express-fileupload");
+const path = require("path");
+const compression = require("compression");
+const helmet = require("helmet");
 
 dotenv.config();
 
 const app = express();
 
 //middleware: which has access in the all app
-app.use(helmet())
+app.use(helmet());
 app.use(express.json());
 app.use(cors());
-app.use(compression())
-app.use(fileUpload({
-  useTempFiles:true
-}))
+app.use(compression());
+app.use(
+  fileUpload({
+    useTempFiles: true,
+  })
+);
 
 //connect ot mongo db
 const URI = process.env.MONGO_URI;
@@ -26,7 +28,8 @@ mongoose.connect(
   URI,
   {
     useNewUrlParser: true,
-  },(err) => {
+  },
+  (err) => {
     if (err) {
       console.log(err);
     } else {
@@ -41,22 +44,23 @@ app.get('/',(req,res)=>{
 });
 */
 
-//create routes 
-app.use("/contact",require("./routes/contactRoute"))
-app.use("/user",require("./routes/userRoute"))
-app.use("/",require("./routes/aboutRoute"));
-app.use("/",require("./routes/eduRoute"));
-app.use("/",require("./routes/expRoute"));
-app.use("/",require("./routes/projectRoute"))
-app.use("/",require("./routes/uploadRoute"))
+//create routes
+app.use("/contact", require("./routes/contactRoute"));
+app.use("/user", require("./routes/userRoute"));
+app.use("/", require("./routes/aboutRoute"));
+app.use("/", require("./routes/eduRoute"));
+app.use("/", require("./routes/expRoute"));
+app.use("/", require("./routes/projectRoute"));
+app.use("/", require("./routes/uploadRoute"));
 
 const PORT_value = process.env.PORT || 5002;
 
-//static assets
-if(process.env.NODE_ENV==='production'){
-  app.use(express.static(path.join(__dirname,'client/build')));
-  app.get('*',(req,res)=>res.sendFile(path.resolve(__dirname,'client','build','index.html')))
-}
+app.use(express.static(path.join(__dirname, "client","build")));
+
+//for static content
+app.get("/*", (req, res) =>
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+);
 
 app.listen(PORT_value, () => {
   console.log("server is listening on port", PORT_value);
