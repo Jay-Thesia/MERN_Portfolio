@@ -47,6 +47,7 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "gh-pages": "^4.0.0",
+    "netlify-cli": "^16.4.2",
     "react-tsparticles": "^2.1.3"
   }
 }

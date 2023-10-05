@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import e from "cors";
 
 const AboutAdmin = () => {
   const [aboutValue, setAbout] = useState("");
@@ -74,7 +73,6 @@ const AboutAdmin = () => {
   return (
     <div className="same-component">
       <div className="same-form">
-   
         <h3 className="aboutAdmin">About Component</h3>
         <form onSubmit={handleSubmit}>
           <label htmlFor="text">About :</label>
@@ -92,7 +90,7 @@ const AboutAdmin = () => {
       </div>
 
       <div className="same-item">
-      <h3
+        <h3
           className={
             setMessageCondition
               ? "new-delete item-delete-tab"
@@ -120,7 +118,6 @@ const AboutAdmin = () => {
             <p>{item.aboutValue}</p>
           </div>
         ))}
-          
       </div>
     </div>
   );
