@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/MERN_Portfolio/static/css/main.28061045.css",
-    "main.js": "/MERN_Portfolio/static/js/main.0e8e5aaa.js",
-    "static/js/787.c4e7f8f9.chunk.js": "/MERN_Portfolio/static/js/787.c4e7f8f9.chunk.js",
-    "static/media/Ums.png": "/MERN_Portfolio/static/media/Ums.9c2296202d7e797b9268.png",
-    "static/media/ContactBanner.gif": "/MERN_Portfolio/static/media/ContactBanner.7389f07a5a5ecfc4cab9.gif",
-    "static/media/Nazak2.png": "/MERN_Portfolio/static/media/Nazak2.0a09116890ace70776bd.png",
-    "static/media/Project portfolio.png": "/MERN_Portfolio/static/media/Project portfolio.60b17d991ea751c10298.png",
-    "static/media/Send_Mail.gif": "/MERN_Portfolio/static/media/Send_Mail.a0d81fe368d02bdd3560.gif",
-    "static/media/Profile.jpg": "/MERN_Portfolio/static/media/Profile.38fb19a7428cbd1ffd4e.jpg",
-    "static/media/Jay_Thesia_Resume_2022.pdf": "/MERN_Portfolio/static/media/Jay_Thesia_Resume_2022.1b3990b188f3645591e0.pdf",
-    "static/media/Logo.png": "/MERN_Portfolio/static/media/Logo.1a0bdc33f58baa6294db.png",
-    "index.html": "/MERN_Portfolio/index.html",
-    "main.28061045.css.map": "/MERN_Portfolio/static/css/main.28061045.css.map",
-    "main.0e8e5aaa.js.map": "/MERN_Portfolio/static/js/main.0e8e5aaa.js.map",
-    "787.c4e7f8f9.chunk.js.map": "/MERN_Portfolio/static/js/787.c4e7f8f9.chunk.js.map"
+    "main.css": "/static/css/main.46adc6ac.css",
+    "main.js": "/static/js/main.c933166c.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/Ums.png": "/static/media/Ums.9c2296202d7e797b9268.png",
+    "static/media/profile2.jpg": "/static/media/profile2.1c22407a9cba7ffddec8.jpg",
+    "static/media/ContactBanner.gif": "/static/media/ContactBanner.7389f07a5a5ecfc4cab9.gif",
+    "static/media/Send_Mail.gif": "/static/media/Send_Mail.0d792b121c0c343547ae.gif",
+    "static/media/Nazak2.png": "/static/media/Nazak2.0a09116890ace70776bd.png",
+    "static/media/Project portfolio.png": "/static/media/Project portfolio.60b17d991ea751c10298.png",
+    "static/media/Profile.jpg": "/static/media/Profile.38fb19a7428cbd1ffd4e.jpg",
+    "static/media/Jay_Thesia_Resume_2022.pdf": "/static/media/Jay_Thesia_Resume_2022.1b3990b188f3645591e0.pdf",
+    "static/media/Logo.png": "/static/media/Logo.1a0bdc33f58baa6294db.png",
+    "index.html": "/index.html",
+    "main.46adc6ac.css.map": "/static/css/main.46adc6ac.css.map",
+    "main.c933166c.js.map": "/static/js/main.c933166c.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.28061045.css",
-    "static/js/main.0e8e5aaa.js"
+    "static/css/main.46adc6ac.css",
+    "static/js/main.c933166c.js"
   ]
 }
