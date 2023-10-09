@@ -7,7 +7,7 @@ import Experience from "./Experience";
 import Education from "./Education";
 import Project from "./Project";
 import Contact from "./Contact";
-import Login from "./Login";
+
 import Profile from "../../images/profile2.jpg";
 import Resume from "../../images/Jay_Thesia_Resume_2022.pdf";
 
@@ -30,7 +30,7 @@ const Header = () => {
     <React.Fragment>
       <div>
         <div className="header" id="header">
-          {/* paritcles part */}
+          {/* particles part */}
           <div className="particle">
             <Particles
               id="tsparticles"
