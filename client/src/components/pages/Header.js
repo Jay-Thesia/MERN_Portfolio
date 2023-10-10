@@ -163,7 +163,7 @@ const Header = () => {
           //   />
           // </div>
 
-          {/* type writer wala work */}
+          
           <p className="iAm">I am a </p>
           <div className="fullName">
             <h1 className="typewriter">
