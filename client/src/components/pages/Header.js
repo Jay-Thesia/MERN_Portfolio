@@ -1,5 +1,5 @@
 import React from "react";
-import Particles from "react-tsparticles";
+// import Particles from "react-tsparticles";
 import Typewriter from "typewriter-effect";
 import "./Header.css";
 import About from "./About";
@@ -11,27 +11,27 @@ import Contact from "./Contact";
 import Profile from "../../images/profile2.jpg";
 import Resume from "../../images/Jay_Thesia_Resume_2022.pdf";
 
-import { loadFull } from "tsparticles";
+// import { loadFull } from "tsparticles";
 
 const Header = () => {
-  const particlesInit = async (main) => {
-    console.log(main);
+  // const particlesInit = async (main) => {
+  //   console.log(main);
 
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    await loadFull(main);
-  };
+  //   // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+  //   // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+  //   // starting from v2 you can add only the features you need reducing the bundle size
+  //   await loadFull(main);
+  // };
 
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
+  // const particlesLoaded = (container) => {
+  //   console.log(container);
+  // };
   return (
     <React.Fragment>
       <div>
         <div className="header" id="header">
           {/* particles part */}
-          <div className="particle">
+          {/* <div className="particle">
             <Particles
               id="tsparticles"
               init={particlesInit}
@@ -161,7 +161,7 @@ const Header = () => {
                 },
               }}
             />
-          </div>
+          </div> */}
 
           {/* type writer wala work */}
           <p className="iAm">I am a </p>
