@@ -25,7 +25,7 @@ const About = () => {
             </li>
             <li>
               <i class="fa-solid fa-circle"></i> I am currently pursuing my
-              Bachlore of Engineering from Lukhdhirji Engineering College in a
+              Bachelor of Engineering from Lukhdhirji Engineering College in a
               specialization of Information and Technology with current CGPA of
               9/10.
             </li>
