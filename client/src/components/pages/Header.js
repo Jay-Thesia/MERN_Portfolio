@@ -15,8 +15,6 @@ import { loadFull } from "tsparticles";
 
 const Header = () => {
   const particlesInit = async (main) => {
-    console.log(main);
-
     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
@@ -72,7 +70,7 @@ const Header = () => {
                       distance: 400,
                       duration: 2,
                       opacity: 0.8,
-                      size: 40,
+                      size: 60,
                       divs: {
                         distance: 200,
                         duration: 0.4,
@@ -106,7 +104,7 @@ const Header = () => {
                     },
                     distance: 150,
                     enable: true,
-                    opacity: 0.4,
+                    opacity: 0.5,
                   },
                   move: {
                     attract: {

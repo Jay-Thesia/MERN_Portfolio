@@ -12,8 +12,6 @@ const Experience = () => {
       <div className="experience">
         <h1 className="title">Experience</h1>
 
-        {/* Static */}
-
         {/* single experience */}
 
         <div className="single-experience">
@@ -23,23 +21,63 @@ const Experience = () => {
           <p className="role">Software Developer (01/23 - Today)</p>
           <ul>
             <li>
-              <i className="fa-solid fa-circle"></i> <b>Tispy</b> : World's
-              foremost phone monitoring application designed to help you ensure
-              your child's and your smartphone's safety. <b> Top 100</b> in
-              Parental Monitoring Software in Brazil.
+              <i className="fa-solid fa-circle"></i>
+              <strong>Collaborated with cross-functional teams</strong> to
+              identify client requirements and deliver{" "}
+              <em>tailored web and mobile solutions.</em>
             </li>
             <li>
-              <i className="fa fa-arrow-right"></i> Work with JSP, Servlet, and
-              other server-side technology and fixed bugs as a daily duty.
+              <i className="fa fa-arrow-right"></i>{" "}
+              <strong>Contributed to company growth</strong> through a versatile
+              skill set in{" "}
+              <em>web and mobile development and migration services</em>.
             </li>
             <li>
-              <i className="fa fa-arrow-right"></i> Converting to MVC: I
-              Converted the Some the other project Which is not following MVC
-              architecture and the loading time decreasing by <b>40%</b>.
+              <i className="fa fa-arrow-right"></i> Created
+              <strong> web and mobile applications</strong>, including{" "}
+              <em>successful deployments</em> with{" "}
+              <span className="important">React and React Native.</span>
             </li>
             <li>
-              <i className="fa fa-arrow-right"></i> Tech Stack: Java, HTML, CSS,
-              JSP, Servlet, Apache tomcat, Mysql.
+              <i className="fa fa-arrow-right"></i>{" "}
+              <strong>Led and executed 500+</strong>{" "}
+              <span className="important">HubSpot migrations</span>, ensuring{" "}
+              <em>smooth transitions</em> for clients.
+            </li>
+            <li>
+              <i className="fa fa-arrow-right"></i> Designed and launched
+              cross-platform mobile applications with React Native, delivering a
+              20% increase in user engagement and a 15% reduction in app load
+              times.
+            </li>
+            <h5>
+              <i className="fa fa-arrow-right"></i> Tech Stack:
+            </h5>
+            <li style={{ marginLeft: "10px" }}>
+              <li>
+                <strong>Frontend:</strong> React.js
+              </li>
+              <li>
+                <strong>Backend:</strong> Node.js, Express.js, Nest.js
+              </li>
+              <li>
+                <strong>Mobile:</strong> Kotlin (Android), React Native
+              </li>
+              <li>
+                <strong>ORM (Object-Relational Mapping):</strong> Sequelize,
+                Prisma
+              </li>
+              <li>
+                <strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, Firebase
+              </li>
+              <li>
+                <strong>Version Control & Collaboration:</strong> Git, GitHub,
+                GitLab
+              </li>
+              <li>
+                <strong>HubSpot:</strong> Experience in HubSpot migrations of
+                all objects and custom properties
+              </li>
             </li>
           </ul>
         </div>
@@ -80,7 +118,7 @@ const Experience = () => {
           <ul>
             <li>
               <i className="fa-solid fa-circle"></i> Data Structures and
-              Algorithms & Web Developent intern
+              Algorithms & Web Development intern
             </li>
             <li>
               <i className="fa fa-arrow-right"></i> During my internship, I had
@@ -126,7 +164,6 @@ const Experience = () => {
             </li>
           </ul>
         </div>
-
         {/* dynamic experience */}
         {/* 
         <div className="experience-center">

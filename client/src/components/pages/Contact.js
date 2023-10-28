@@ -118,7 +118,7 @@ const Contact = () => {
                 required
                 value={name}
                 onChange={handleNameChange}
-                style={{ "margin-bottom": "10px" }}
+                style={{ marginBottom: "10px" }}
               />
               <ValidationError
                 prefix="Name"
@@ -131,7 +131,7 @@ const Contact = () => {
                 id="email"
                 type="email"
                 name="email"
-                style={{ "margin-bottom": "10px" }}
+                style={{ marginBottom: "10px" }}
                 placeholder={"Enter your email"}
               />
               <ValidationError
@@ -146,9 +146,9 @@ const Contact = () => {
                 name="message"
                 placeholder={"Enter your message "}
                 style={{
-                  "margin-bottom": "10px",
-                  "font-size": "14px",
-                  "font-family": "Arial, sans-serif",
+                  marginBottom: "10px",
+                  fontSize: "14px",
+                  fontFamily: "Arial, sans-serif",
                   letterSpacing: 0.5,
                 }}
               />

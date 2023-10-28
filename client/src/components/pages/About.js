@@ -15,23 +15,23 @@ const About = () => {
         <div className="about-info">
           <ul className="bullet">
             <li>
-              <i class="fa-solid fa-circle"></i> Hello everyone, I am Jay
+              <i className="fa-solid fa-circle"></i> Hello everyone, I am Jay
               Thesia. This is my personal portfolio which has been created by
               me.
             </li>
             <li>
-              <i class="fa-solid fa-circle"></i> I am Student and self taught
-              Developer.{" "}
+              <i className="fa-solid fa-circle"></i> I am Student and self
+              taught Developer.{" "}
             </li>
             <li>
-              <i class="fa-solid fa-circle"></i> I am currently pursuing my
+              <i className="fa-solid fa-circle"></i> I am currently pursuing my
               Bachelor of Engineering from Lukhdhirji Engineering College in a
               specialization of Information and Technology with current CGPA of
               9/10.
             </li>
             <li>
-              <i class="fa-solid fa-circle"></i> I can cover all the full stack
-              requirement in web development.
+              <i className="fa-solid fa-circle"></i> I can cover all the full
+              stack requirement in web development.
             </li>
           </ul>
         </div>

@@ -41,7 +41,6 @@ export const DataProvider = ({ children }) => {
     }
   });
 
-
   //fetching data
   const fetchData = async () => {
     //*******for fetch about************
@@ -66,13 +65,13 @@ export const DataProvider = ({ children }) => {
   };
 
   //use effect to take the data from backend dymaically and render it
-  useEffect(() => {
-    try {
-      fetchData();
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
+  // useEffect(() => {
+  //   try {
+  //     fetchData();
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }, []);
 
   //create state
   const state = {
@@ -80,7 +79,7 @@ export const DataProvider = ({ children }) => {
     education: [eduValue, setEducation],
     experience: [expValue, setExperience],
     project: [project, setProject],
-    isLogin: [isLogin,setIsLogin]
+    isLogin: [isLogin, setIsLogin],
   };
 
   return <DataContext.Provider value={state}>{children}</DataContext.Provider>;
