@@ -2,7 +2,9 @@ import React from "react";
 import Port from "../../images/Project portfolio.png";
 import nazakat from "../../images/Nazak2.png";
 import Ums from "../../images/Ums.png";
+import jpProject from "../../images/jpProject.png";
 import "./Project.css";
+
 const Project = () => {
   return (
     <div>
@@ -11,6 +13,47 @@ const Project = () => {
           <h1 className="title">Project</h1>
 
           <div className="project-center">
+            {/* single Project */}
+            <div className="single-project">
+              <div className="single-project-img">
+                <img src={jpProject} alt="Portfolio img" width="300px" />
+              </div>
+            
+              <div className="single-project-info">
+                <h3>JP Projects Website</h3>
+                <li>
+                  <i className="fas fa-arrow-right"></i>&#160; Developed a professional website for JP Projects, a construction company specializing in commercial IT office spaces and private property development, using the MERN stack.
+                </li>
+            
+                <li>
+                  <i className="fas fa-arrow-right"></i>&#160; Designed a responsive website with sections for services, ongoing and completed projects, and company information.
+                </li>
+            
+                <li>
+                  <i className="fas fa-arrow-right"></i>&#160; Provided a seamless and interactive user experience.
+                </li>
+            
+                <li>
+                  <i className="fas fa-arrow-right"></i>&#160; Integrated an admin panel for easy content management and updates.
+                </li>
+            
+                <li>
+                  <i className="fas fa-arrow-right"></i>&#160; TECH STACK: MongoDB, Express.js, React.js, Node.js, Netlify, Render.
+                </li>
+            
+                <li>
+                  <i className="fas fa-arrow-right"></i>&#160;{" "}
+                  <a
+                    href="https://jpatelprojects.netlify.app/"
+                    className="weblink"
+                    target="_blank"
+                  >
+                    Link <i className="fa-solid fa-link"></i>
+                  </a>
+                </li>
+              </div>
+            </div>
+            
             {/* single Project */}
             <div className="single-project">
               <div className="single-project-img">
