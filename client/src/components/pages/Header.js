@@ -9,7 +9,7 @@ import Project from "./Project";
 import Contact from "./Contact";
 import Login from "./Login";
 import Profile from "../../images/profile2.jpg";
-import Resume from "../../images/Jay_Thesia_Resume_2022.pdf";
+
 
 import { loadFull } from "tsparticles";
 
@@ -190,9 +190,9 @@ const Header = () => {
             <span>
               <b>CV: </b>
               <a
-                href={Resume}
+                href="https://drive.google.com/file/d/1WcpYWlj-ub3MVHnbSHVEZ2Tfc8ApjMce/view?usp=drivesdk"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="fa-solid fa-file-pdf"
               ></a>
             </span>
