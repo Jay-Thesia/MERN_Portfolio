@@ -9,7 +9,8 @@ import Project from "./Project";
 import Contact from "./Contact";
 import Login from "./Login";
 import Profile from "../../images/Profile.jpg";
-import Resume from "../../images/Jay_Thesia_Resume_2022.pdf"
+import Resume from "../../images/Jay_Thesia_Resume_2022.pdf";
+import { Link } from "react-router-dom";
 
 import { loadFull } from "tsparticles";
 
@@ -194,17 +195,17 @@ const Header = () => {
           </div>
 
           {/* cv card */}
-          <div className="cv">
-            <span>
-              <b>CV: </b>
-              <a
-                href={Resume}
-                target="_blank"
-                rel="noreferrer"
-                className="fa-solid fa-file-pdf"
-              ></a>
-            </span>
-          </div>
+         <div className="cv">
+          <span>
+            <b>CV: </b>
+            <a
+              href="https://drive.google.com/file/d/1WcpYWlj-ub3MVHnbSHVEZ2Tfc8ApjMce/view?usp=drivesdk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="fa-solid fa-file-pdf"
+            ></a>
+          </span>
+        </div>
         </div>
       </div>
 
