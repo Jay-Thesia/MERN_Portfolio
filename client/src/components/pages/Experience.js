@@ -15,9 +15,9 @@ const Experience = () => {
         {/* single experience */}
         <div className="single-experience">
           <p>
-            <b>Weam.ai (Remote)</b>
+            <b>Weam.ai (Hybrid)</b>
           </p>
-          <p className="role">Full Stack Developer (06/23 - Today)</p>
+          <p className="role">Full Stack Developer (09/24 - Today)</p>
           <ul>
             <li>
               <i className="fa-solid fa-circle"></i>
@@ -84,9 +84,9 @@ const Experience = () => {
 
         <div className="single-experience">
           <p>
-            <b>EsparkBiz Technologies Pvt. Ltd. , Ahmedabad, Gujarat</b>
+            <b>Espark Tech, Ahmedabad, Gujarat</b>
           </p>
-          <p className="role">Software Developer (01/23 - Today)</p>
+          <p className="role">Software Developer (01/23 - 09/23)</p>
           <ul>
             <li>
               <i className="fa-solid fa-circle"></i>
