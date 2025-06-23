@@ -7,39 +7,30 @@ const About = () => {
   const [aboutValue] = state.about;
 
   return (
-   <div className="main-container" id="About">
-    <div className="about">
-      <h1 className="title">About Me</h1>
-      <div className="about-info">
-        <ul className="bullet">
-          <li>
-            <i className="fa-solid fa-circle"></i> Hello! I'm{' '}
-            <span style={{ whiteSpace: 'nowrap' }}>Jay Thesia</span>, a full-stack developer with 2 years of hands-on experience building scalable web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js).
-          </li>
-          <li>
-            <i className="fa-solid fa-circle"></i> I specialize in creating robust backend APIs, responsive UIs, and deploying cloud-native applications. I’m also skilled in AWS services like Lambda, EC2, S3, and SQS.
-          </li>
-          <li>
-            <i className="fa-solid fa-circle"></i> I earned my{' '}
-            <span style={{ whiteSpace: 'nowrap' }}>Bachelor of Engineering in Information Technology</span> from Lukhdhirji Engineering College with a CGPA of 9.0/10.
-          </li>
-          <li>
-            <i className="fa-solid fa-circle"></i> Currently building a multi-LLM platform with document/image-based RAG, chat optimizations, and secure payments using Stripe and Razorpay.
-          </li>
-          <li>
-            <i className="fa-solid fa-circle"></i> Improved chat load time from 7–8s to 2–3s using Next.js dynamic imports, Next/Image, and server-side API handling.
-          </li>
-          <li>
-            <i className="fa-solid fa-circle"></i> Implemented AWS S3 pre-signed URLs for efficient file uploads/downloads and enhanced system performance.
-          </li>
-          <li>
-            <i className="fa-solid fa-circle"></i> I’m passionate about building efficient, secure applications—and always open to learning and growing in the field of software development.
-          </li>
-        </ul>
+      <div className="main-container" id="About">
+      <div className="about">
+        <h1 className="title">About Me</h1>
+        <div className="about-info">
+          <ul className="bullet">
+            <li>
+              <i className="fa-solid fa-circle"></i> Hello! I'm Jay Thesia, a full-stack developer with 2.5 years of hands-on experience building scalable web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js).
+            </li>
+            <li>
+              <i className="fa-solid fa-circle"></i> I specialize in creating robust backend APIs, responsive UIs, and deploying cloud-native applications. I’m also skilled in AWS services like Lambda, EC2, S3, and SQS.
+            </li>
+            <li>
+              <i className="fa-solid fa-circle"></i> I earned my Bachelor of Engineering in Information Technology from Lukhdhirji Engineering College with a CGPA of 9.0/10.
+            </li>
+            <li>
+              <i className="fa-solid fa-circle"></i> At EsparkBiz Technologies, I delivered performance-optimized MERN applications, boosting engagement by 20% and cutting load time by 15% using chunking and image compression.
+            </li>
+            <li>
+              <i className="fa-solid fa-circle"></i> I enjoy solving real-world problems, building elegant UIs, and writing clean, maintainable code. Always learning—currently diving deeper into system design and AWS architecture.
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-
   );
 };
 
