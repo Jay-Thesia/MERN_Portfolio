@@ -13,6 +13,74 @@ const Experience = () => {
         <h1 className="title">Experience</h1>
 
         {/* single experience */}
+        <div className="single-experience">
+          <p>
+            <b>Weam.ai (Remote)</b>
+          </p>
+          <p className="role">Full Stack Developer (06/23 - Today)</p>
+          <ul>
+            <li>
+              <i className="fa-solid fa-circle"></i>
+              <strong>Built and launched Weam.ai</strong>, a multi-LLM AI platform with
+              <em> Retrieval-Augmented Generation (RAG)</em> to enhance response quality and relevance.
+            </li>
+            <li>
+              <i className="fa fa-arrow-right"></i>{" "}
+              <strong>Implemented real-time features</strong> using WebSockets and{" "}
+              <span className="important">Redis Pub/Sub</span>, enabling horizontal scalability.
+            </li>
+            <li>
+              <i className="fa fa-arrow-right"></i>{" "}
+              <strong>Optimized performance</strong> via Next.js dynamic component loading and{" "}
+              <span className="important">Image component</span>, reducing page load time by approximately <strong>35%</strong>.
+            </li>
+            <li>
+              <i className="fa fa-arrow-right"></i>{" "}
+              <strong>Integrated Stripe and Razorpay</strong> payment gateways from scratch, including{" "}
+              <em>webhooks, subscription plans, and multi-tier support</em>.
+            </li>
+            <li>
+              <i className="fa fa-arrow-right"></i>{" "}
+              <strong>Implemented AWS S3 file handling</strong> with pre-signed URLs, cutting upload latency by <strong>~40%</strong>.
+            </li>
+            <li>
+              <i className="fa fa-arrow-right"></i>{" "}
+              Leveraged <strong>SSR and server-side API calls</strong> in Next.js to deliver SEO-friendly and high-performing pages.
+            </li>
+            <li>
+              <i className="fa fa-arrow-right"></i>{" "}
+              <strong>Reduced chat response time</strong> from <em>8–9 seconds to 2–3 seconds</em> by optimizing backend queries, caching, and component rendering.
+            </li>
+            <h5>
+              <i className="fa fa-arrow-right"></i> Tech Stack:
+            </h5>
+            <li style={{ marginLeft: "10px" }}>
+              <li>
+                <strong>Frontend:</strong> Next.js, React.js
+              </li>
+              <li>
+                <strong>Backend:</strong> Node.js, Express.js
+              </li>
+              <li>
+                <strong>Real-Time:</strong> Socket.io, Redis Pub/Sub
+              </li>
+              <li>
+                <strong>Payments:</strong> Stripe, Razorpay
+              </li>
+              <li>
+                <strong>Cloud & Storage:</strong> AWS S3 (Pre-signed URLs)
+              </li>
+              <li>
+                <strong>Database:</strong> MongoDB, Firebase, Redis
+              </li>
+              <li>
+                <strong>Version Control:</strong> Git, GitHub
+              </li>
+            </li>
+          </ul>
+        </div>
+
+        {/* single experience */}
 
         <div className="single-experience">
           <p>
