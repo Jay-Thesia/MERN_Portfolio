@@ -12,9 +12,9 @@ const About = () => {
       <h1 className="title">About Me</h1>
       <div className="about-info">
         <ul className="bullet">
-          <li>
-            <i className="fa-solid fa-circle"></i> Hello! I'm <strong>Jay Thesia</strong>, a full-stack developer with <strong>2 years of hands-on experience</strong> building scalable web applications using the <strong>MERN stack (MongoDB, Express.js, React.js, Node.js)</strong>.
-          </li>
+         <li>
+          <i className="fa-solid fa-circle"></i> Hello! I'm <b> Jay Thesia </b>, a full-stack developer with <strong> 2 years of hands-on experience </strong> building scalable web applications using the <b> MERN stack (MongoDB, Express.js, React.js, Node.js) </b>.
+        </li>
           <li>
             <i className="fa-solid fa-circle"></i> I specialize in creating robust backend APIs, responsive UIs, and deploying cloud-native applications. I’m also skilled in <strong>AWS services</strong> like Lambda, EC2, S3, and SQS.
           </li>
