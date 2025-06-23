@@ -22,7 +22,7 @@ const About = () => {
               <i className="fa-solid fa-circle"></i> I earned my Bachelor of Engineering in Information Technology from Lukhdhirji Engineering College with a CGPA of 9.0/10.
             </li>
             <li>
-              <i className="fa-solid fa-circle"></i> At EsparkBiz Technologies, I delivered performance-optimized MERN applications, boosting engagement by 20% and cutting load time by 15% using chunking and image compression.
+              <i className="fa-solid fa-circle"></i> At Current Company, I delivered performance-optimized MERN applications, boosting engagement by 20% and cutting load time by 15% using chunking and image compression.
             </li>
             <li>
               <i className="fa-solid fa-circle"></i> I enjoy solving real-world problems, building elegant UIs, and writing clean, maintainable code. Always learning—currently diving deeper into system design and AWS architecture.
