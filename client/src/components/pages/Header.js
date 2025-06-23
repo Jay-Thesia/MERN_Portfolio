@@ -190,7 +190,7 @@ const Header = () => {
             <span>
               <b>CV: </b>
               <a
-                href="https://drive.google.com/file/d/1WcpYWlj-ub3MVHnbSHVEZ2Tfc8ApjMce/view?usp=drivesdk"
+                href="https://drive.google.com/file/d/1gyDTmn6vmfnRur3HHw-JPpGr7sRHC_P_/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fa-solid fa-file-pdf"
