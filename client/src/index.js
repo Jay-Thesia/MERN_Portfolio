@@ -6,14 +6,17 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route } from "react-router-dom";
 import Navbar from "./components/pages/Navbar";
 import { DataProvider } from "./components/context/GlobalContext";
+import { ThemeProvider } from "./components/context/ThemeContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <DataProvider>
-        <App />
-      </DataProvider>
+      <ThemeProvider>
+        <DataProvider>
+          <App />
+        </DataProvider>
+      </ThemeProvider>
     </React.StrictMode>
   </BrowserRouter>
 );

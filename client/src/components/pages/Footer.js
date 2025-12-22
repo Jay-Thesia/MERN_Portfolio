@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { scrollbar, scroller } from "react-scroll";
-import "./Footer.css";
+import { scroller } from "react-scroll";
 import { DataContext } from "../context/GlobalContext";
 
 const Footer = () => {
   const state = useContext(DataContext);
   const [isLogin, setIsLogin] = state.isLogin;
 
-  const logOutSubmit=()=>{
+  const logOutSubmit = () => {
     localStorage.clear();
     setIsLogin(false);
-  }
+  };
+
   const scrollToElement = (element) => {
     scroller.scrollTo(element, {
       smooth: true,
@@ -20,127 +20,114 @@ const Footer = () => {
       offset: -80,
     });
   };
+
+  const footerLinks = [
+    { name: "Home", icon: "fas fa-home", element: "Home" },
+    { name: "About", icon: "fas fa-address-card", element: "About" },
+    { name: "Education", icon: "fas fa-university", element: "Education" },
+    { name: "Experience", icon: "fas fa-suitcase", element: "Experience" },
+    { name: "Project", icon: "fas fa-diagram-project", element: "Project" },
+    { name: "Contact", icon: "fas fa-address-book", element: "Contact" },
+  ];
+
+  const socialLinks = [
+    { name: "GitHub", icon: "fab fa-github", url: "https://github.com/Jay-Thesia" },
+    { name: "LinkedIn", icon: "fa-brands fa-linkedin", url: "https://www.linkedin.com/in/jay-patel-76830b1ab/" },
+    { name: "Leetcode", icon: "fas fa-code", url: "https://leetcode.com/kaleen123/" },
+    { name: "Youtube", icon: "fab fa-youtube-square", url: "https://www.youtube.com/channel/UCvuJ6UsnBrpLNvbaVITyJFA" },
+    { name: "Instagram", icon: "fa-brands fa-instagram", url: "https://instagram.com/jay_patel_2410" },
+    { name: "Twitter", icon: "fa-brands fa-twitter", url: "https://twitter.com/thisisjbt" },
+    { name: "Linktree", icon: "fas fa-tree", url: "https://linktr.ee/thisisJay" },
+  ];
+
   return (
-    <React.Fragment>
-      <div className="main-title">
-        <h2 className="title footer-title"></h2>
-      </div>
-      <div className="footer-center">
-        <div className="link-center">
-          {/* links */}
-
-          <div className="link">
-            <h3>Links</h3>
-
-            <li onClick={() => scrollToElement("Home")}>
-              <Link to="/">
-                <i className="fas fa-home"></i> Home
-              </Link>
-            </li>
-            <li onClick={() => scrollToElement("About")}>
-              <Link to="/">
-                <i className="fas fa-address-card"></i> About
-              </Link>
-            </li>
-            <li onClick={() => scrollToElement("Education")}>
-              <Link to="/">
-                <i className="fas fa-university"></i> Education
-              </Link>
-            </li>
-            <li onClick={() => scrollToElement("Experience")}>
-              <Link to="/">
-                <i className="fas fa-suitcase"></i> Experience
-              </Link>
-            </li>
-            <li onClick={() => scrollToElement("Project")}>
-              <Link to="/">
-                <i className="fas fa-diagram-project"></i> Project
-              </Link>
-            </li>
-            <li onClick={() => scrollToElement("Contact")}>
-              <Link to="/">
-                <i className="fas fa-address-book"></i> Contact
-              </Link>
-            </li>
-
-            <li className={isLogin ? "" : "adminLi"}>
-              <Link to={isLogin ? "/admin" : "/"}>
-                {isLogin ? (
-                  <div className="admin">
-                    <i className="fas fa-screwdriver-wrench"></i> Admin
-                  </div>
-                ) : (
-                  ""
-                )}
-              </Link>
-            </li>
-
-            <li onClick={logOutSubmit}>
-              <Link to="/login">
-                {isLogin?<div className=""><i className="fas fa-right-from-bracket"></i> Logout</div>: <div className=""><i className="fas fa-right-to-bracket"></i> Login</div> }
-              </Link>
-            </li>
+    <footer className="bg-gray-900 dark:bg-black text-gray-300 border-t border-gray-800 dark:border-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+          {/* Links Section */}
+          <div className="text-center md:text-left">
+            <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+            <ul className="space-y-2 flex flex-col items-center md:items-start">
+              {footerLinks.map((link, index) => (
+                <li key={index}>
+                  <button
+                    onClick={() => scrollToElement(link.element)}
+                    className="flex items-center justify-center md:justify-start space-x-2 text-gray-400 hover:text-primary-400 transition-colors"
+                  >
+                    <i className={link.icon}></i>
+                    <span>{link.name}</span>
+                  </button>
+                </li>
+              ))}
+              {isLogin && (
+                <li>
+                  <Link
+                    to="/admin"
+                    className="flex items-center justify-center md:justify-start space-x-2 text-gray-400 hover:text-primary-400 transition-colors"
+                  >
+                    <i className="fas fa-screwdriver-wrench"></i>
+                    <span>Admin</span>
+                  </Link>
+                </li>
+              )}
+              <li>
+                <Link
+                  to={isLogin ? "/" : "/login"}
+                  onClick={isLogin ? logOutSubmit : undefined}
+                  className="flex items-center justify-center md:justify-start space-x-2 text-gray-400 hover:text-primary-400 transition-colors"
+                >
+                  <i className={isLogin ? "fas fa-right-from-bracket" : "fas fa-right-to-bracket"}></i>
+                  <span>{isLogin ? "Logout" : "Login"}</span>
+                </Link>
+              </li>
+            </ul>
           </div>
 
-          {/* Media */}
-          <div className="media-center">
-            <h3>Media</h3>
-            <div className="media-link">
-              <li>
-                <a href="https://github.com/Jay-Thesia" target="_blank">
-                  <i className="fab fa-github"></i> GitHub
-                </a>
-              </li>
+          {/* Social Media Section */}
+          <div className="text-center md:text-left">
+            <h3 className="text-lg font-semibold text-white mb-4">Social Media</h3>
+            <ul className="space-y-2">
+              {socialLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center md:justify-start space-x-2 text-gray-400 hover:text-primary-400 transition-colors"
+                  >
+                    <i className={link.icon}></i>
+                    <span>{link.name}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/jay-patel-76830b1ab/"
-                  target="_blank"
-                >
-                  <i className="fa-brands fa-linkedin"></i> Linkedin
-                </a>
-              </li>
-
-              <li>
-                <a href="https://leetcode.com/kaleen123/" target="_blank">
-                  <i className="fas fa-code"></i> Leetcode
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://www.youtube.com/channel/UCvuJ6UsnBrpLNvbaVITyJFA"
-                  target="_blank"
-                >
-                  <i className="fab fa-youtube-square"></i> Youtube
-                </a>
-              </li>
-
-              <li>
-                <a href="https://instagram.com/jay_patel_2410" target="_blank">
-                  <i className="fa-brands fa-instagram"></i> Instagram
-                </a>
-              </li>
-
-              <li>
-                <a href="https://twitter.com/thisisjbt" target="_blank">
-                  <i className="fa-brands fa-twitter"></i> Twitter
-                </a>
-              </li>
-
-              <li>
-                <a href="https://linktr.ee/thisisJay" target="_blank">
-                  <i className="fas fa-tree"></i> Linktree
-                </a>
-              </li>
+          {/* Contact Info */}
+          <div className="text-center md:text-left">
+            <h3 className="text-lg font-semibold text-white mb-4">Get In Touch</h3>
+            <div className="space-y-2 text-gray-400">
+              <p className="flex items-center justify-center md:justify-start space-x-2">
+                <i className="fas fa-envelope"></i>
+                <span className="break-all">jayengineer.jp2410@gmail.com</span>
+              </p>
+              <p className="text-sm mt-4">
+                Always open to new opportunities and collaborations!
+              </p>
             </div>
           </div>
         </div>
-        <div className="footer">
-          <p>Designed and Made Jay Patel</p>
+
+        {/* Copyright */}
+        <div className="border-t border-gray-800 dark:border-gray-900 pt-8 text-center">
+          <p className="text-gray-400 text-sm">
+            Designed and Made by{" "}
+            <span className="text-primary-400 font-semibold">Jay Patel</span> ©{" "}
+            {new Date().getFullYear()}
+          </p>
         </div>
       </div>
-    </React.Fragment>
+    </footer>
   );
 };
 

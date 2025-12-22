@@ -1,29 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* App.css - Minimal styles, most styling handled by Tailwind */
+
+.App {
+  min-height: 100vh;
 }
 
-
-
-.main-container,
-.contact,
-.main-title {
- 
-  margin: 0 auto;
-  padding: 0 10px;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* ......................header.............. */
-
-/* for more check header.css */
-
-/* ...........end header................... */

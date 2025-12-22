@@ -1,7 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-
-import { createContext } from "react";
+import React, { useEffect, useState, createContext } from "react";
 
 export const DataContext = createContext();
 export const DataProvider = ({ children }) => {
@@ -39,7 +37,7 @@ export const DataProvider = ({ children }) => {
     } catch (error) {
       console.log(error);
     }
-  });
+  }, []);
 
   //fetching data
   const fetchData = async () => {
