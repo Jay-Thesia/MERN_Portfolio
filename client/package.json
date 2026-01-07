@@ -18,7 +18,9 @@
     "react-tsparticles": "^2.12.2",
     "tsparticles": "^2.12.0",
     "typewriter-effect": "^2.19.0",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.5.6"
   },
   "scripts": {
     "deploy": "npm run build && gh-pages -d build",
@@ -49,8 +51,6 @@
     "autoprefixer": "^10.4.23",
     "cross-env": "^7.0.3",
     "gh-pages": "^4.0.0",
-    "netlify-cli": "^16.4.2",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.1"
+    "netlify-cli": "^16.4.2"
   }
 }
