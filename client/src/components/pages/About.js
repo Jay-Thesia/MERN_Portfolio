@@ -14,7 +14,7 @@ const About = () => {
             <li className="flex items-start space-x-3">
               <i className="fas fa-circle text-primary-500 dark:text-primary-400 mt-2 text-xs"></i>
               <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed">
-                Hello! I'm Jay Thesia, a full-stack developer with 2.5 years of hands-on experience building scalable web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js).
+                Hello! I'm Jay Thesia, a full-stack developer with 3+ years of hands-on experience building scalable web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js).
               </p>
             </li>
             <li className="flex items-start space-x-3">

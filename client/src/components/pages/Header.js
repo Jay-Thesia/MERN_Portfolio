@@ -235,7 +235,7 @@ const Header = () => {
       </div>
 
       <div>
-        <Education />
+        <Experience />
       </div>
 
       <div>
@@ -243,7 +243,7 @@ const Header = () => {
       </div>
 
       <div>
-        <Experience />
+        <Education />
       </div>
 
       <div>
